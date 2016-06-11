@@ -12,6 +12,7 @@ permalink: /:year/:title/
 
 # Meta settings
 email: clement.moron@gmail.com
+author: Clement Moron
 twitter_username: clenemt
 github_username: .clenemt
 
@@ -25,3 +26,9 @@ exclude:
   - vendor
 gems:
   - jekyll-paginate
+
+
+# Optional settings
+github_source: clenemt/clenemt.com
+google_analytics: 'UA-XXXXXXXX-X'
+colophon: true
