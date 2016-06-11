@@ -3,12 +3,13 @@ rvm:
   - 2.1
 
 before_script:
-  # Ensure the script is executable
-  - chmod +x ./script/cibuild.sh
+  # Install dependencies
+  - gem install jekyll html-proofer
 
 script:
-  # Run main ci script
-  - ./script/cibuild.sh
+  # Build and test
+  - jekyll build
+  #- htmlproofer ./_site --allow-hash-href --only-4xx --check-html
 
 after_success:
   # Push site to S3 if succeeded
