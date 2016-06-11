@@ -1,12 +1,26 @@
 <head>
+
+  <!-- Common metas -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+  <title>
+  {% if page.microtitle %}{{ page.microtitle }} | {{ site.title }}
+  {% elsif page.title %}{{ page.title }} | {{ site.title }}
+  {% else %}{{ site.title }}{% endif %}
+  </title>
 
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}">
+  <!-- SEO metas -->
+  <meta name="description" content="{% if page.desc %}{{ page.desc }}{% elsif page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.desc }}{% endif %}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" href="{{ site.baseurl }}/assets/images/apple-touch-icon.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}/assets/images/favicon.ico">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+
 </head>

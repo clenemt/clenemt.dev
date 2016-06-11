@@ -1,43 +1,36 @@
-<footer>
+<footer class="site-footer">
+
   <div>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</div>
+
   <div>
     <ul>
       {% if site.email %}
-      <li>
-        <a href="mailto:{{ site.email }}">Contact</a>
-      </li>
+      <li><a href="mailto:{{ site.email }}">Contact</a></li>
       {% endif %}
       {% if site.github_username %}
-      <li>
-        <a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a>
-      </li>
+      <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
       {% endif %}
       {% if site.twitter_username %}
-      <li>
-        <a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>
-      </li>
+      <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
       {% endif %}
     </ul>
   </div>
 
-  <!-- Optional -->
   <div>
     <ul>
-      {% if site.github_source %}
-      <li>
-        <a href="https://github.com/{{ site.github_source }}">Source</a>
-      </li>
-      {% endif %}
-      {% if site.colophon %}
-      <li>
-        <a href="{{ site.baseurl }}/colophon.md">Colophon</a>
-      </li>
-      {% endif %}
+      <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
+      <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
     </ul>
   </div>
-</footer>
 
-<!-- Google Analytics -->
+</footer>
+<!-- site-footer -->
+
+{% if page.syntax %}
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/css/syntax.css">
+{% endif %}
+
+
 {% if site.google_analytics %}
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

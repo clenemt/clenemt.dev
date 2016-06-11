@@ -2,11 +2,12 @@
 
 # Site settings
 title: clenemt
-description: >
+desc: >
   Write an awesome description for your new site here. You can edit this
   line in _config.yml. It will appear in your document head meta (for
   Google search results) and in your feed.xml site description.
 
+url: http://clenemt.com
 baseurl: '' # the subpath of your site, e.g. /blog
 permalink: /:year/:title/
 
@@ -14,21 +15,44 @@ permalink: /:year/:title/
 email: clement.moron@gmail.com
 author: Clement Moron
 twitter_username: clenemt
-github_username: .clenemt
+github_username:  clenemt
 
-# RSS settings
-url: http://clenemt.com
+# Optional settings
+google_analytics: 'UA-XXXXXXXX-X'
 
+# Pagination settings
+paginate: 5
+paginate_path: "/articles/page:num/"
+
+# Navigation settings
+navigation:
+  - title: Articles
+    url: /articles/
+    desc: Read articles about the web ever changing techs and best practices
+  - title: Projects
+    url: /projects/
+    desc: Projects that I have built in my spare time and that I am proud to showcase
+  - title: About
+    url: /about/
+    desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
+
+# Front Matter settings
+defaults:
+  -
+    scope:
+      path: ''
+      type: posts
+    values:
+      layout: post
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
 exclude:
   - vendor
+include:
+  - _pages
+exclude:
+  - README.md
 gems:
   - jekyll-paginate
 
-
-# Optional settings
-github_source: clenemt/clenemt.com
-google_analytics: 'UA-XXXXXXXX-X'
-colophon: true

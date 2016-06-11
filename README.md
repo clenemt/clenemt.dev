@@ -7,7 +7,7 @@ Jackal is a very lightweight theme for Jekyll. Feel free to fork, change, modify
 
 Jackal is cruft free meaning you get what you asked for and nothing more. Perfect for folks who just need a starter theme to work from.
 
-# How to use it
+# Usage
 Simply clone this repository, and then run `jekyll serve` from inside the directory.
 
 # What's inside
@@ -23,6 +23,16 @@ Jackal theme includes:
 * Google Analytics tracking code
 
 Used at http://clenemt.com
+
+## Options (aka front matter)
+Pages:
+* title (the page h1 & title)
+* microtitle (for a page title /= title)
+* desc (for a SEO description /= excerpt)
+
+Post: 
+* microtitle (for a page title /= title)
+* desc (for a manual excerpt and SEO description)
 
 # Thanks
 Thanks to [Kactus](https://github.com/nickbalestra/kactus) and [minami](https://github.com/nijikokun/minami).
