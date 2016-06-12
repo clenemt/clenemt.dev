@@ -1,0 +1,17 @@
+.site {
+  margin-right: auto;
+  margin-left: auto;
+  @include make-container();
+}
+
+.site-nav {
+  float: right;
+}
+
+.site-title {
+  float: left;
+}
+
+.site-header {
+  @include clearfix();
+}

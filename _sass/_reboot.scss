@@ -128,15 +128,6 @@ b, strong {
   font-weight: bolder;
 }
 
-mark {
-  background-color: #ff0;
-  color: #000;
-}
-
-small {
-  font-size: 80%;
-}
-
 img {
   border-style: none;
   vertical-align: middle;
@@ -144,20 +135,6 @@ img {
 
 svg:not(:root) {
   overflow: hidden;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
-}
-
-pre {
-  margin-top: 0;
-  margin-bottom: 1rem;
-  overflow: auto;
 }
 
 figure {
@@ -303,7 +280,7 @@ table {
 caption {
   padding-top: .75rem;
   padding-bottom: .75rem;
-  color: $text-muted;
+  color: $muted-color;
   text-align: left;
   caption-side: bottom;
 }

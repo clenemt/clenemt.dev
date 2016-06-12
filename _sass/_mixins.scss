@@ -1,24 +1,39 @@
+// UTILS ====================================
+
+@mixin clearfix () {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin tab-focus () {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px;
+}
+
 // MEDIA QUERIES (MQ) ====================================
 
 // MQ - HELPERS ------------------
-@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+@function breakpoint-next ($name, $breakpoints, $breakpoint-names: map-keys($breakpoints)) {
   $n: index($breakpoint-names, $name);
   @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
 }
 
-@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-min ($name, $breakpoints) {
   $min: map-get($breakpoints, $name);
   @return if($min != 0, $min, null);
 }
 
-@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+@function breakpoint-max ($name, $breakpoints) {
   $next: breakpoint-next($name, $breakpoints);
   @return if($next, breakpoint-min($next, $breakpoints) - 1px, null);
 }
 
 // MQ - EXPOSED ------------------
-// Makes the @content apply to the given breakpoint and wider.
-@mixin mq-up($name, $breakpoints: $grid-breakpoints) {
+@mixin mq-up ($name, $breakpoints: $mq-breakpoints) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
@@ -29,8 +44,7 @@
   }
 }
 
-// Makes the @content apply to the given breakpoint and narrower.
-@mixin mq-down($name, $breakpoints: $grid-breakpoints) {
+@mixin mq-down ($name, $breakpoints: $mq-breakpoints) {
   $max: breakpoint-max($name, $breakpoints);
   @if $max {
     @media (max-width: $max) {
@@ -41,28 +55,29 @@
   }
 }
 
-// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
-@mixin mq-only($name, $breakpoints: $grid-breakpoints) {
-  @include media-breakpoint-up($name, $breakpoints) {
-    @include media-breakpoint-down($name, $breakpoints) {
+@mixin mq-only ($name, $breakpoints: $mq-breakpoints) {
+  @include mq-up ($name, $breakpoints) {
+    @include mq-down ($name, $breakpoints) {
       @content;
     }
   }
 }
 
 // Makes the @content apply between the min and max breakpoints
-@mixin mq-between($lower, $upper, $breakpoints: $grid-breakpoints) {
-  @include media-breakpoint-up($lower, $breakpoints) {
-    @include media-breakpoint-down($upper, $breakpoints) {
+@mixin mq-between ($lower, $upper, $breakpoints: $mq-breakpoints) {
+  @include mq-up ($lower, $breakpoints) {
+    @include mq-down ($upper, $breakpoints) {
       @content;
     }
   }
 }
 
-// FOCUS ====================================
+// GRID ====================================
 
-@mixin tab-focus() {
-  outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+@mixin make-container ($max-widths: $container-widths) {
+  @each $breakpoint, $container-width in $max-widths {
+    @include mq-up($breakpoint) {
+      max-width: $container-width;
+    }
+  }
 }
