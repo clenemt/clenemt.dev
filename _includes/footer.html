@@ -1,8 +1,8 @@
 <footer class="site-footer">
 
-  <div>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</div>
+  <div class="site-copy">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</div>
 
-  <div>
+  <div class="site-contact">
     <ul>
       {% if site.email %}
       <li><a href="mailto:{{ site.email }}">Contact</a></li>
@@ -16,7 +16,7 @@
     </ul>
   </div>
 
-  <div>
+  <div class="site-source">
     <ul>
       <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
       <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>

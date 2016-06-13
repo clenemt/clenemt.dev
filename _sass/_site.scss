@@ -1,17 +1,62 @@
+// SITE STYLES ====================================
+
 .site {
   margin-right: auto;
   margin-left: auto;
   @include make-container();
 }
 
+// SITE - HEADER ------------------
+.site-header {
+  margin: 3rem 0;
+  @include clearfix();
+}
+
 .site-nav {
   float: right;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  line-height: ($headings-line-height * $font-size-h1);
+
+  a {
+    flex: 0 1 auto;
+  }
 }
 
 .site-title {
   float: left;
+  width: 30%;
 }
 
-.site-header {
-  @include clearfix();
+// SITE - FOOTER ------------------
+.site-footer {
+  margin: 3rem 0;
+}
+
+.site-footer {
+  ul, li {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+
+  li {
+    display: inline-block;
+  }
+}
+
+.site-contact,
+.site-copy {
+  float: left;
+  width: 50%;
+}
+
+.site-contact {
+  text-align: right;
 }
