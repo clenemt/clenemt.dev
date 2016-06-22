@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Side projects are fun
-microtitle: Projects
-desc: Projects that I have built in my spare time and that I am proud to showcase
-permalink: /projects/
+title: Happy users, happy clients
+microtitle: Work
+desc: Projects that I have worked on an that I thought you may find interesting
+permalink: /work/
 ---
 
 # Typography 
@@ -12,7 +12,7 @@ permalink: /projects/
 
 Headings from `h1` through `h6` are constructed with a `#` for each level:
 
-``` markdown
+```markdown
 # h1 Heading
 ## h2 Heading
 ### h3 Heading
@@ -23,10 +23,7 @@ Headings from `h1` through `h6` are constructed with a `#` for each level:
 
 Renders to:
 
-# h1 Headingqsdqsdqs
-dqs
-dqs
-d
+# h1 Heading
 ## h2 Heading
 ### h3 Heading
 #### h4 Heading

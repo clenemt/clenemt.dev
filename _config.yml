@@ -32,6 +32,9 @@ navigation:
   - title: Projects
     url: /projects/
     desc: Projects that I have built in my spare time and that I am proud to showcase
+  - title: Work
+    url: /work/
+    desc: Projects that I have worked on an that I thought you may find interesting
   - title: About
     url: /about/
     desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
@@ -45,14 +48,19 @@ defaults:
     values:
       layout: post
 
+# Markdown parser settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  parse_block_html: true
+
 # Build settings
-markdown: redcarpet
-exclude:
-  - vendor
 include:
   - _pages
 exclude:
   - README.md
+  - vendor
 gems:
   - jekyll-paginate
 

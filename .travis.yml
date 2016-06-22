@@ -3,8 +3,8 @@ rvm:
   - 2.1
 
 before_script:
-  # Install dependencies
-  - gem install jekyll html-proofer
+  # Install dependencies (automatic with a gemfile)
+  # - gem install jekyll html-proofer
 
 script:
   # Build and test
