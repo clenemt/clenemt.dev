@@ -1,7 +1,7 @@
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: ($spacer / 2);
-  font-family: inherit;
+  font-family: $font-heading;
   font-weight: 500;
   line-height: $headings-line-height;
   color: inherit;
@@ -15,8 +15,7 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 .lead {
-  font-size: 1.75rem;  // 28px
-  font-weight: 300;
+  font-size: $font-size-h4;
 }
 
 hr {

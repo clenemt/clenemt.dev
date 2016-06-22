@@ -2,8 +2,8 @@
 layout: default
 ---
 
-<div class="lead">
-  Hi! I’m **Clement Moron**, a french [frontend architect](about/), [writer](articles/) and <span class="select-hide">not so</span> talented climber. I work as a nexus between design and frontend, [making websites](work/) scalable and lightning-fast.
+<div class="lead intro">
+  Hi! I’m **Clement Moron**, a [frontend architect](about/), [writer](articles/) and <span class="select-hide">not so</span> talented climber. I work as a nexus between design and frontend, [making websites](work/) scalable and lightning-fast.
 
   I like to build [cool things](projects/) in my spare time.
 

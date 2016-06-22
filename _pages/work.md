@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Happy users, happy clients
-microtitle: Work
+title: Work
+subtitle: Happy users, happy clients
 desc: Projects that I have worked on an that I thought you may find interesting
 permalink: /work/
 ---

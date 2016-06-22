@@ -26,8 +26,8 @@ Used at http://clenemt.com
 
 ## Options (aka front matter)
 Pages:
-* title (the page h1 & title)
-* microtitle (for a page title /= title)
+* title (the page title)
+* subtitle (the page h1)
 * desc (for a SEO description /= excerpt)
 
 Post: 

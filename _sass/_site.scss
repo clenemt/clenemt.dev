@@ -17,10 +17,26 @@
   width: 70%;
   display: flex;
   justify-content: space-around;
-  line-height: ($headings-line-height * $font-size-h1);
+  line-height: ($headings-line-height * $font-size-h1) - .5rem;
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  margin-top: .5rem;
+}
 
-  a {
-    flex: 0 1 auto;
+.site-nav a {
+  flex: 0 1 auto;
+  padding: 0 .5em;
+
+  &:focus,
+  &:hover {
+    text-decoration: none;
+    background-color: #d6d6f1;
+  }
+
+  .active,
+  &:active {
+    background-color: #aeaed6;
+    color: #fff;
   }
 }
 
@@ -59,4 +75,12 @@
 
 .site-contact {
   text-align: right;
+}
+
+.intro {
+  font-family: $font-family;
+
+  a {
+    text-decoration: underline;
+  }
 }

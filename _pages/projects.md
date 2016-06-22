@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Side projects are fun
-microtitle: Projects
+title: Projects
+subtitle: Side projects are fun
 desc: Projects that I have built in my spare time and that I am proud to showcase
 permalink: /projects/
 ---
