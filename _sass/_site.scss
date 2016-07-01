@@ -7,23 +7,24 @@
   @include make-container();
 }
 
-.intro {
-  font-family: $font-family;
-
-  a {
-    @include make-link($link-color, $link-hover-color, $body-bg);
-  }
-}
-
 hr {
   border-top: 5px solid $brand-light-color;
 }
 
 // SITE - HOME ------------------
+.intro {
+  font-family: $font-family;
+  line-height: 1.6;
+
+  p { margin-bottom: (2 * $spacer); }
+  a { @include make-link($link-color, $link-hover-color, $body-bg); }
+}
+
 .select-hide {
   background-color: $gray-lighter;
   color: $gray-lighter;
   white-space: nowrap;
+  text-decoration: line-through;
 }
 
 // SITE - HEADER ------------------
@@ -155,10 +156,17 @@ hr {
   }
 }
 
-.site-contact,
+.site-contact {
+  float: right;
+  width: 50%;
+}
+
 .site-source {
   float: left;
   width: 50%;
+  a {
+    color: $gray;
+  }
 }
 
 .site-author {
@@ -182,7 +190,20 @@ hr {
 
 // SITE - RESPONSIVE ------------------
 
-@include mq-down(sm) {
+@include mq-down(md) {
+
+  .site-header {
+    margin: 2rem 0;
+  }
+
+  .intro {
+    font-size: $font-size-h5;
+    line-height: inherit;
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
   .site-title,
   .site-nav {
     width: 100%;
@@ -196,6 +217,15 @@ hr {
   .site-nav {
     justify-content: center;
     a { margin-right: ($spacer/2); }
+  }
+}
+
+@include mq-down(xs) {
+  .site-contact,
+  .site-source {
+    float: none;
+    width: 100%;
+    text-align: left;
   }
 }
 

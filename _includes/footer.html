@@ -2,13 +2,6 @@
 
   <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div>
 
-  <div class="site-source">
-    <ul>
-      <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
-      <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
-    </ul>
-  </div>
-
   <div class="site-contact">
     <ul>
       {% if site.email %}
@@ -20,6 +13,13 @@
       {% if site.twitter_username %}
       <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
       {% endif %}
+    </ul>
+  </div>
+
+  <div class="site-source">
+    <ul>
+      <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
+      <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
     </ul>
   </div>
 
