@@ -7,5 +7,5 @@ layout: default
 
   I like to experiment and build [cool things](projects/) in my spare time.
 
-  I'm <span class="select-hide">crazy</span> passionate about my craft, always looking out for original ideas and new things. I'm drawn to anything that involves hiking, climbing or [traveling](https://vimeo.com/120206922).
+  I'm <span class="select-hide">fucking</span> passionate about my craft, always looking out for original ideas and new things. I'm drawn to anything that involves hiking, climbing or [traveling](https://vimeo.com/120206922).
 </div>

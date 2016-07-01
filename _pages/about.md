@@ -12,6 +12,8 @@ I aim to create products that make users and clients happy. True care for qualit
 
 I like **simple solutions** to complex problems.
 
+---
+
 While my main skills are in frontend architecture, my mindset is that of a designer. I like to come up with simple and friendly ways for a user to achieve the task. Good design I believe, is *invisible*. It’s when you can’t think of a product in any other, better way when you’ve achieved good design.
 
 This translates in frontend development to *responsible* responsive design. Years ago I realized it’s not just about adapting to screen sizes, but also the browser, network conditions, ways the device is being used, accessibility and more.

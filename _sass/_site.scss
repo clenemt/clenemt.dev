@@ -15,6 +15,17 @@
   }
 }
 
+hr {
+  border-top: 5px solid $brand-light-color;
+}
+
+// SITE - HOME ------------------
+.select-hide {
+  background-color: $gray-lighter;
+  color: $gray-lighter;
+  white-space: nowrap;
+}
+
 // SITE - HEADER ------------------
 .site-header {
   margin: (3 * $spacer) 0;
@@ -94,6 +105,7 @@
 .post-date {
   display: block;
   font-family: $font-heading;
+  font-size: 1rem;
   color: $text-muted;
   margin: -0.3rem 0 $heading-spacer 0;
 }
@@ -120,8 +132,10 @@
 
 // SITE - FOOTER ------------------
 .site-footer {
-  margin: (3 * $spacer) 0;
+  margin-top: (3 * $spacer);
+  padding-top: (1.5 * $spacer);
   font-family: $font-heading;
+  border-top: 1px solid $brand-light-color;
 }
 
 .site-footer {
@@ -142,18 +156,28 @@
 }
 
 .site-contact,
-.site-copy {
+.site-source {
   float: left;
   width: 50%;
 }
 
 .site-author {
   font-weight: bold;
-  margin-left: ($spacer / 2);
+  margin-left: ($spacer/2);
 }
 
 .site-contact {
   text-align: right;
+}
+
+.site-contact li,
+.site-source li {
+
+  &:not(:last-child)::after {
+    content: '|';
+    color: $brand-light-color;
+    margin: 0 .3rem 0 ($spacer/2);
+  }
 }
 
 // SITE - RESPONSIVE ------------------
@@ -171,7 +195,7 @@
 
   .site-nav {
     justify-content: center;
-    a { margin-right: 0.5rem; }
+    a { margin-right: ($spacer/2); }
   }
 }
 
