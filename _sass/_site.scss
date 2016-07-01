@@ -133,7 +133,7 @@ hr {
 
 // SITE - FOOTER ------------------
 .site-footer {
-  margin-top: (3 * $spacer);
+  margin: (3 * $spacer) 0 (1.5 * $spacer);
   padding-top: (1.5 * $spacer);
   font-family: $font-heading;
   border-top: 1px solid $brand-light-color;
