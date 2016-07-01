@@ -81,3 +81,40 @@
     }
   }
 }
+
+// TEXT ====================================
+
+@mixin make-link ($color, $color-hover, $color-bg) {
+  color: $color;
+  text-shadow: 0.04545em 0 0 $color-bg,
+  0.09091em 0 0 $color-bg,
+  0.13636em 0 0 $color-bg,
+  -0.04545em 0 0 $color-bg,
+  -0.09091em 0 0 $color-bg,
+  -0.13636em 0 0 $color-bg,
+  0 0.04545em 0 $color-bg,
+  0 0.09091em 0 $color-bg,
+  0 -0.04545em 0 $color-bg,
+  0 -0.09091em 0 $color-bg;
+  background-image: linear-gradient($color, $color);
+  background-position: 0 1.10em;
+  background-size: 1px 1px;
+  background-repeat: repeat-x;
+  text-decoration: none;
+
+  &:hover,
+  &:active {
+    color: $color-hover;
+    text-decoration: none;
+    background-image: linear-gradient($color-hover, $color-hover);
+  }
+
+  &:focus {
+    outline: 0;
+    transition: none;
+    text-shadow: none;
+    background: $color;
+    color: $color-bg;
+    text-decoration: none;
+  }
+}

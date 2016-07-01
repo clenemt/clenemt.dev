@@ -7,7 +7,9 @@ $gray-light:                #818a91;
 $gray-lighter:              #eceeef;
 $gray-lightest:             #f7f7f9;
 
-$blue:                      #2a7ae2;
+$blue:                      #4072AF;
+$light-blue:                lighten($blue, 45%);
+$dark-blue:                 darken($blue, 20%);
 
 $ligt-yellow:               #fcf8e3;
 
@@ -15,21 +17,23 @@ $red:                       #bd4147;
 
 // BRAND COLORS ------------------
 $brand-color:               $blue;
+$brand-light-color:         $light-blue;
 $brand-secondary:           $gray-dark;
 
 // GLOBALS  ====================================
 
 $body-bg:                   $gray-lightest;
-$body-color:                $gray;
-$muted-color:               $gray-light;
+$body-color:                $gray-dark;
 
 $link-color:                $brand-color;
 $link-decoration:           none;
-$link-hover-color:          darken($link-color, 15%);
+$link-hover-color:          $dark-blue;
 $link-hover-decoration:     underline;
 
 $spacer:                    1rem;
 $border-width:              1px;
+
+$text-muted:                $gray-light;
 
 $border-radius:             .25rem;
 $border-radius-lg:          .3rem;
@@ -51,6 +55,7 @@ $font-size-h5:              1.25rem;
 $font-size-h6:              1rem;
 
 $headings-line-height:      1.1;
+$heading-spacer:            ($spacer / 2);
 
 $small-font-size:           80%;
 
@@ -63,6 +68,7 @@ $mq-breakpoints: (
 );
 
 $container-widths: (
-  md: 748px
+  sm: 544px,
+  md: 720px
 );
 

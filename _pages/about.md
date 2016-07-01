@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-subtitle: I am a frontend architect
+subtitle: I am a frontend architect.
 desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
 permalink: /about/
 ---

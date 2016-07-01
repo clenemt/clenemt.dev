@@ -3,12 +3,21 @@
 .site {
   margin-right: auto;
   margin-left: auto;
+  padding: 0 $spacer;
   @include make-container();
+}
+
+.intro {
+  font-family: $font-family;
+
+  a {
+    @include make-link($link-color, $link-hover-color, $body-bg);
+  }
 }
 
 // SITE - HEADER ------------------
 .site-header {
-  margin: 3rem 0;
+  margin: (3 * $spacer) 0;
   @include clearfix();
 }
 
@@ -17,25 +26,27 @@
   width: 70%;
   display: flex;
   justify-content: space-around;
-  line-height: ($headings-line-height * $font-size-h1) - .5rem;
+  line-height: ($headings-line-height * $font-size-h1) - $heading-spacer;
   font-family: $font-heading;
   font-size: 1.25rem;
-  margin-top: .5rem;
+  margin-top: $heading-spacer;
 }
 
 .site-nav a {
   flex: 0 1 auto;
-  padding: 0 .5em;
+  padding: 0 $heading-spacer;
+  transition: background 0.1s ease-out;
 
-  &:focus,
   &:hover {
     text-decoration: none;
-    background-color: #d6d6f1;
+    color: $link-color;
+    background-color: $brand-light-color;
   }
 
-  .active,
+  &:focus,
   &:active {
-    background-color: #aeaed6;
+    background-color: $link-color;
+    text-decoration: none;
     color: #fff;
   }
 }
@@ -45,9 +56,72 @@
   width: 30%;
 }
 
+// SITE - CONTENT ------------------
+.page-header {
+  margin-bottom: (2 * $spacer);
+}
+
+.page-title {
+  margin-top: -$spacer;
+  font-weight: bold;
+}
+
+.page-content {
+  font-size: $font-size-h5;
+}
+
+// SITE - POST ------------------
+.post-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.post-link,
+.post-link:hover,
+.post-link:focus {
+  text-decoration: none;
+  color: $body-color;
+}
+
+.post {
+  margin-bottom: (2 * $spacer);
+}
+
+.post-title {
+  color: $brand-color;
+}
+
+.post-date {
+  display: block;
+  font-family: $font-heading;
+  color: $text-muted;
+  margin: -0.3rem 0 $heading-spacer 0;
+}
+
+// Bar at bottom
+.post-link::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 5px;
+  background: $brand-light-color;
+  -webkit-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transform: scaleX(.2);
+  transform: scaleX(.2);
+  transition: .5s all cubic-bezier(.5, -.2, .25, 1.2);
+}
+
+.post-link:focus::after,
+.post-link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
 // SITE - FOOTER ------------------
 .site-footer {
-  margin: 3rem 0;
+  margin: (3 * $spacer) 0;
+  font-family: $font-heading;
 }
 
 .site-footer {
@@ -73,14 +147,43 @@
   width: 50%;
 }
 
+.site-author {
+  font-weight: bold;
+  margin-left: ($spacer / 2);
+}
+
 .site-contact {
   text-align: right;
 }
 
-.intro {
-  font-family: $font-family;
+// SITE - RESPONSIVE ------------------
 
-  a {
-    text-decoration: underline;
+@include mq-down(sm) {
+  .site-title,
+  .site-nav {
+    width: 100%;
+    float: none;
   }
+
+  .site-title {
+    text-align: center;
+  }
+
+  .site-nav {
+    justify-content: center;
+    a { margin-right: 0.5rem; }
+  }
+}
+
+// SITE - SELECTION ------------------
+::-moz-selection {
+  background-color: $brand-color;
+  color: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: $brand-color;
+  color: #fff;
+  text-shadow: none;
 }

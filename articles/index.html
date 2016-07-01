@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Article
-subtitle: Things that i write about
+subtitle: Things that i write about.
 desc: Read articles about the web ever changing techs and best practices.
 ---
 
@@ -14,7 +14,7 @@ desc: Read articles about the web ever changing techs and best practices.
 <ul class="post-list">
   {% for post in paginator.posts %}
   <li class="post">
-    <a href="{{ post.url | prepend: site.baseurl }}">
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
       <h3 class="post-title">{{ post.title }}</h3>
       <time class="post-date" datetime="{{ post.date }}">
       {% assign d = post.date | date: "%-d" %}
