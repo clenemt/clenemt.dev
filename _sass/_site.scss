@@ -102,6 +102,9 @@
 
 .post-content,
 .page-content {
+
+  font-size: $fs-sm;
+
   h2 {
     margin-top: $spacer2;
     margin-bottom: $spacer;
@@ -122,16 +125,15 @@
     margin-bottom: $spacer2;
   }
 
-  .page-content,
-  .post-content {
+  .post-content,
+  .page-content {
     font-size: $fs-md;
     line-height: $lh-md;
 
-    p { margin-bottom: $spacer1; }
-  }
+    p {
+      margin-bottom: $spacer1;
+    }
 
-  .post-content,
-  .page-content {
     h2 {
       margin-top: $spacer4;
       margin-bottom: $spacer1;
