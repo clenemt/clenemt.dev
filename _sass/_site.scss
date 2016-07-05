@@ -39,7 +39,7 @@
   justify-content: center;
   line-height: $spacer1;
   font-family: "Lato", serif;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
 }
 
 .site-title {
@@ -48,7 +48,7 @@
 
 .site-nav a {
   flex: 0 1 auto;
-  padding: .25rem $spacer0;
+  padding: .25rem;
   margin-right: $spacer0;
   transition: background 0.1s ease-out;
 
@@ -83,6 +83,7 @@
     width: 70%;
     margin-top: $spacer0;
     justify-content: space-around;
+    font-size: 1.25rem;
   }
 
   .site-title {
