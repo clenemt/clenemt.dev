@@ -115,6 +115,8 @@
 .page-content {
   font-size: $fs-sm;
 
+  p { margin-bottom: $spacer1; }
+
   h2 {
     margin-top: $spacer2;
     margin-bottom: $spacer;
@@ -139,10 +141,6 @@
   .page-content {
     font-size: $fs-md;
     line-height: $lh-md;
-
-    p {
-      margin-bottom: $spacer1;
-    }
 
     h2 {
       margin-top: $spacer4;
