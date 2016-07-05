@@ -30,7 +30,7 @@
 // SITE HEADER ====================================
 
 .site-header {
-  margin: $spacer4 0 $spacer3;
+  margin: $spacer4 0 $spacer1;
   @include clearfix();
 }
 
@@ -74,7 +74,7 @@
 
 @include mq-up(sm) {
   .site-header {
-    margin-top: 5rem;
+    margin: 5rem 0 $spacer3;
   }
 
   .site-nav a {
@@ -83,12 +83,18 @@
 }
 
 @include mq-up(md) {
+  .site-header {
+    margin: $spacer4 0 $spacer3;
+  }
+
   .site-nav {
     float: right;
     width: 70%;
     margin-top: $spacer0;
     justify-content: space-around;
     font-size: 1.25rem;
+
+    a { margin-right: 0; }
   }
 
   .site-title {
@@ -107,6 +113,7 @@
 
 .post-content,
 .page-content {
+  font-size: $fs-sm;
 
   h2 {
     margin-top: $spacer2;
