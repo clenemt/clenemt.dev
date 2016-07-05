@@ -14,11 +14,17 @@
 
 // SITE HOME ====================================
 
-.select-hide {
+.select-hide,
+.select-show {
   background-color: $gray-lighter;
   color: $gray-lighter;
   white-space: nowrap;
   text-decoration: line-through;
+}
+
+.select-show {
+  color: #fff;
+  background-color: $gray-dark;
 }
 
 // SITE HEADER ====================================
