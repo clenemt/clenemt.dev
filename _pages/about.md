@@ -6,19 +6,21 @@ desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
 permalink: /about/
 ---
 
-For the past 5+ years I've worked at Dassault Systemes as a *full stack* developer with a UX/UI driven background and a user centered approach.
+<div class="lead">For the past 5+ years I've worked at [Dassault Systemes](http://www.3ds.com/fr/) as a *full stack* developer with a UX/UI driven background and a user centered approach.
+</div>
 
 I aim to create products that make users and clients happy. True care for quality and web standards is what has always motivated me, so I approach work through *progressive enhancement*.
 
-I like **simple solutions** to complex problems.
+I like simple solutions to complex problems.
 
 ---
 
+## Design and development
 While my main skills are in frontend architecture, my mindset is that of a designer. I like to come up with simple and friendly ways for a user to achieve the task. Good design I believe, is *invisible*. It’s when you can’t think of a product in any other, better way when you’ve achieved good design.
 
 This translates in frontend development to *responsible* responsive design. Years ago I realized it’s not just about adapting to screen sizes, but also the browser, network conditions, ways the device is being used, accessibility and more.
 
-# Technical skillset
+## Technical skillset
 I’m extremely fluent with CSS preprocessors (Sass, LESS). I’m familiar with task runners and CI servers (Grunt, Webpack, Jekyll, Travis), content management systems (WordPress, Jekyll) and project planning software (Trello, Gitlab, Redmine).
 
 Web performance is very important to me. I find performance budgets to be *key* for a good frontend architecture. I understand the waterfall, how browser requests work and how to optimize the above-the-fold content, with caching, conditional loading and asset optimization.

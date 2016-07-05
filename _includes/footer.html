@@ -2,25 +2,27 @@
 
   <div class="site-copy">&copy; {{ site.time | date: '%Y' }}<span class="site-author">{{ site.author }}</span></div>
 
-  <div class="site-contact">
-    <ul>
-      {% if site.email %}
-      <li><a href="mailto:{{ site.email }}">Contact</a></li>
-      {% endif %}
-      {% if site.github_username %}
-      <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
-      {% endif %}
-      {% if site.twitter_username %}
-      <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
-      {% endif %}
-    </ul>
-  </div>
+  <div class="site-links">
+    <div class="site-contact">
+      <ul>
+        {% if site.email %}
+        <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        {% endif %}
+        {% if site.github_username %}
+        <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
+        {% endif %}
+        {% if site.twitter_username %}
+        <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
+        {% endif %}
+      </ul>
+    </div>
 
-  <div class="site-source">
-    <ul>
-      <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
-      <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
-    </ul>
+    <div class="site-source">
+      <ul>
+        <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
+        <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
+      </ul>
+    </div>
   </div>
 
 </footer>

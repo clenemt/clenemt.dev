@@ -1,36 +1,56 @@
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
-  margin-bottom: $heading-spacer;
+// TEXT ====================================
+
+// TEXT - HEADINGS ------------------
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $spacer0;
   font-family: $font-heading;
   font-weight: 500;
-  line-height: $headings-line-height;
+  line-height: $line-height-headings;
   color: inherit;
 }
 
-h1, .h1 { font-size: $font-size-h1; }
-h2, .h2 { font-size: $font-size-h2; }
-h3, .h3 { font-size: $font-size-h3; }
-h4, .h4 { font-size: $font-size-h4; }
-h5, .h5 { font-size: $font-size-h5; }
-h6, .h6 { font-size: $font-size-h6; }
+h1 { font-size: $fs-h1; font-weight: bold; }
+h2 { font-size: $fs-h2; }
+h3 { font-size: $fs-h3; }
+h4 { font-size: $fs-h4; }
+h5 { font-size: $fs-h5; }
+h6 { font-size: $fs-h6; }
 
+@include mq-up(md) {
+  h1 { font-size: $fs-md-h1; }
+  h2 { font-size: $fs-md-h2; }
+  h3 { font-size: $fs-md-h3; }
+  h4 { font-size: $fs-md-h4; }
+  h5 { font-size: $fs-md-h5; }
+  h6 { font-size: $fs-md-h6; }
+}
+
+// TEXT - UTILS ------------------
 .lead {
-  font-size: $font-size-h4;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  p { margin-bottom: 1.5rem; }
+  a { @include make-link($link-color, $link-hover-color, $body-bg); }
 }
 
 hr {
-  margin-top: $spacer;
-  margin-bottom: $spacer;
+  margin: $spacer 0 $spacer1;
   border: 0;
-  border-top: $border-width solid rgba(0,0,0,.1);
+  border-top: 5px solid $brand-light-color;
 }
 
 small,
 .small {
-  font-size: $small-font-size;
+  font-size: 80%;
   font-weight: normal;
 }
 
+@include mq-up(md) {
+  .lead { font-size: 1.5rem; }
+}
+
+// TEXT - CODE ------------------
 mark,
 .mark {
   padding: .2em;

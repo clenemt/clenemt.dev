@@ -63,19 +63,14 @@ template,
   display: none !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  margin-top: 0;
-  margin-bottom: .5rem;
-}
-
 p {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer;
 }
 
 ol, ul, dl {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: $spacer;
 }
 
 ol ol,
@@ -86,7 +81,7 @@ ul ol {
 }
 
 blockquote {
-  margin: 0 0 1rem;
+  margin: 0 0 $spacer;
 }
 
 a {
@@ -139,7 +134,7 @@ svg:not(:root) {
 }
 
 figure {
-  margin: 0 0 1rem;
+  margin: 0 0 $spacer;
 }
 
 hr {
@@ -225,7 +220,7 @@ legend {
   box-sizing: border-box;
   width: 100%;
   padding: 0;
-  margin-bottom: .5rem;
+  margin-bottom: $spacer0;
   font-size: 1.5rem;
   line-height: inherit;
   color: inherit;
@@ -235,7 +230,7 @@ legend {
 
 label {
   display: inline-block;
-  margin-bottom: .5rem;
+  margin-bottom: $spacer0;
 }
 
 textarea {

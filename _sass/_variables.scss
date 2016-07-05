@@ -1,6 +1,6 @@
 // COLORS ====================================
 
-// MAIN COLORS ------------------
+// COLORS - INDEX ------------------
 $gray-dark:                 #373a3c;
 $gray:                      #55595c;
 $gray-light:                #818a91;
@@ -15,61 +15,75 @@ $ligt-yellow:               #fcf8e3;
 
 $red:                       #bd4147;
 
-// BRAND COLORS ------------------
+// COLORS - BRAND ------------------
 $brand-color:               $blue;
 $brand-light-color:         $light-blue;
 $brand-secondary:           $gray-dark;
+$text-muted:                $gray-light;
 
 // GLOBALS  ====================================
 
 $body-bg:                   $gray-lightest;
 $body-color:                $gray-dark;
 
+// GLOBALS - LINKS ------------------
 $link-color:                $brand-color;
 $link-decoration:           none;
 $link-hover-color:          $dark-blue;
 $link-hover-decoration:     underline;
 
+// GLOBALS - SPACERS ------------------
 $spacer:                    1rem;
+$spacer0:                  $spacer/2;
+$spacer1:                   $spacer * 1.5;
+$spacer2:                   $spacer * 2;
+$spacer3:                   $spacer * 2.5;
+$spacer4:                   $spacer * 3;
+
+// GLOBALS - BORDERS ------------------
 $border-width:              1px;
-
-$text-muted:                $gray-light;
-
 $border-radius:             .25rem;
-$border-radius-lg:          .3rem;
 $border-radius-sm:          .2rem;
+$border-radius-lg:          .3rem;
 
+// GLOBALS - FONTS ------------------
 $font-family:               "Lora", sans-serif;
 $font-family-monospace:     Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 $font-heading:              "Lato", serif;
 
+$line-height:               1.5;
+$lh-md:                     1.6;
+$line-height-headings:      1.1;
+
 $font-size-root:            16px;
 $font-size:                 1rem;
-$line-height:               1.5;
+$fs-md:                     1.25rem;
 
-$font-size-h1:              2.5rem;
-$font-size-h2:              2rem;
-$font-size-h3:              1.75rem;
-$font-size-h4:              1.5rem;
-$font-size-h5:              1.25rem;
-$font-size-h6:              1rem;
+$fs-h1:                     2rem;
+$fs-h2:                     1.75rem;
+$fs-h3:                     1.5rem;
+$fs-h4:                     1.25rem;
+$fs-h5:                     1rem;
+$fs-h6:                     .833rem;
 
-$headings-line-height:      1.1;
-$heading-spacer:            ($spacer / 2);
-
-$small-font-size:           80%;
+$fs-md-h1:                  2.441rem;
+$fs-md-h2:                  1.953rem;
+$fs-md-h3:                  1.563rem;
+$fs-md-h4:                  1.25rem;
+$fs-md-h5:                  1rem;
+$fs-md-h6:                  .8rem;
 
 // RESPONSIVE ====================================
 
 $mq-breakpoints: (
   xs: 0,
-  sm: 440px,
-  md: 544px,
-  lg: 768px
+  sm: 480px,
+  md: 768px,
+  lg: 1024px
 );
 
 $container-widths: (
-  sm: 544px,
-  md: 720px
+  sm: 620px,
+  md: 748px
 );
 
