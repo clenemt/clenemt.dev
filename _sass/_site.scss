@@ -71,9 +71,14 @@
 }
 
 // SITE HEADER - RESPONSIVE ------------------
+
 @include mq-up(sm) {
   .site-header {
-    margin: $spacer4 0;
+    margin-top: 5rem;
+  }
+
+  .site-nav a {
+    margin-right: $spacer1;
   }
 }
 
@@ -102,8 +107,6 @@
 
 .post-content,
 .page-content {
-
-  font-size: $fs-sm;
 
   h2 {
     margin-top: $spacer2;
@@ -196,7 +199,7 @@ p.post-desc {
 }
 
 .post-link::after {
-  width: 50%;
+  width: 100%;
   -webkit-transform-origin: left center;
   transform-origin: left center;
   -webkit-transform: scaleX(.2);
@@ -206,8 +209,8 @@ p.post-desc {
 
 .post-link:focus::after,
 .post-link:hover::after {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
+  -webkit-transform: scaleX(.4);
+  transform: scaleX(.4);
 }
 
 // SITE FOOTER ====================================

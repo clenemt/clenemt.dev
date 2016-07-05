@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-size: $font-size-root;
+  font-size: $fs-root;
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -24,7 +24,7 @@ html {
 
 body {
   font-family: $font-family;
-  font-size: $font-size;
+  font-size: $fs;
   line-height: $line-height;
   color: $body-color;
   background-color: $body-bg;
