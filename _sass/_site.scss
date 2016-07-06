@@ -219,6 +219,27 @@ p.post-desc {
   transform: scaleX(.4);
 }
 
+// SITE PAGES ====================================
+
+.lead-about {
+  color: $dark-blue;
+}
+
+.project {
+  margin-right: $spacer;
+  font-size: 1rem;
+
+  h4 {
+    font-weight: bold;
+  }
+}
+
+@include mq-up(md) {
+  .projects {
+    margin-top: $spacer2;
+  }
+}
+
 // SITE FOOTER ====================================
 
 .site-footer {
@@ -282,6 +303,7 @@ p.post-desc {
 }
 
 // SITE SELECTION ====================================
+
 ::-moz-selection {
   background-color: $brand-color;
   color: #fff;
@@ -292,4 +314,14 @@ p.post-desc {
   background-color: $brand-color;
   color: #fff;
   text-shadow: none;
+}
+
+// SITE EMOJI ====================================
+
+.emoji {
+  width: 1em;
+  vertical-align: inherit;
+
+  &.right { margin-right: .3rem; }
+  &.left { margin-left: .3rem; }
 }
