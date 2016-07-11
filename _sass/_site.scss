@@ -34,10 +34,13 @@
   @include clearfix();
 }
 
+.site-logo {
+  width: 3rem;
+}
+
 .site-nav {
   display: flex;
   justify-content: center;
-  line-height: $spacer1;
   font-family: "Lato", serif;
   font-size: 1.1rem;
 }
@@ -48,7 +51,7 @@
 
 .site-nav a {
   flex: 0 1 auto;
-  padding: .25rem;
+  padding: 0 .25rem;
   margin-right: $spacer0;
   transition: background 0.1s ease-out;
 
@@ -74,7 +77,7 @@
 
 @include mq-up(sm) {
   .site-header {
-    margin: 5rem 0 $spacer3;
+    margin: 5rem 0 $spacer2;
   }
 
   .site-nav a {
@@ -83,23 +86,31 @@
 }
 
 @include mq-up(md) {
+  .site-logo {
+    margin-left: $spacer;
+    width: 3.5rem;
+  }
+
   .site-header {
-    margin: $spacer4 0 $spacer3;
+    margin: $spacer4 0 $spacer2;
   }
 
   .site-nav {
     float: right;
-    width: 70%;
+    width: 80%;
     margin-top: $spacer0;
     justify-content: space-around;
     font-size: 1.25rem;
 
-    a { margin-right: 0; }
+    a {
+      margin-right: 0;
+      padding: .25rem $spacer0;
+    }
   }
 
   .site-title {
     float: left;
-    width: 30%;
+    width: 20%;
     text-align: inherit;
   }
 }
