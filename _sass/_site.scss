@@ -178,10 +178,12 @@
   .post-title {
     color: $brand-color;
     margin-bottom: $spacer0;
+    font-weight: bold;
   }
 
   .post {
     margin-bottom: $spacer2;
+    font-size: 1rem;
   }
 }
 
@@ -195,9 +197,9 @@
 .post-date {
   display: block;
   font-family: $font-heading;
-  font-size: 1rem;
   color: $text-muted;
   margin: -$spacer0 0 $spacer;
+  font-size: 0.875rem;
 }
 
 // Reset the responsive content
@@ -217,18 +219,17 @@ p.post-desc {
 }
 
 .post-link::after {
-  width: 100%;
   -webkit-transform-origin: left center;
   transform-origin: left center;
-  -webkit-transform: scaleX(.2);
-  transform: scaleX(.2);
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
   transition: .5s all cubic-bezier(.5, -.2, .25, 1.2);
 }
 
 .post-link:focus::after,
 .post-link:hover::after {
-  -webkit-transform: scaleX(.4);
-  transform: scaleX(.4);
+  -webkit-transform: scaleX(3);
+  transform: scaleX(3);
 }
 
 // SITE PAGES ====================================
@@ -240,15 +241,31 @@ p.post-desc {
 .project {
   margin-right: $spacer;
   font-size: 1rem;
+}
 
-  h4 {
+.project-title {
+  margin-bottom: $spacer1;
+
+  a {
     font-weight: bold;
+    border-bottom: 5px solid $brand-light-color;
+    padding-bottom: $spacer0;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      border-bottom-color: $brand-color;
+    }
   }
 }
 
 @include mq-up(md) {
   .projects {
     margin-top: $spacer2;
+  }
+
+  .project-title {
+    margin-bottom: $spacer2;
   }
 }
 

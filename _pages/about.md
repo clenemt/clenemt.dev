@@ -2,7 +2,7 @@
 layout: page
 title: About
 subtitle: I am a frontend architect.
-desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
+desc: Learn about me, my hobbies and some other cool things.
 permalink: /about/
 ---
 

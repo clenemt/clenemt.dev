@@ -1,4 +1,4 @@
-# The main config file for your Jenkyll template
+# The main config file for your Jekyll template
 
 # Site settings
 title: Clenemt
@@ -28,16 +28,16 @@ paginate_path: "/articles/page:num/"
 navigation:
   - title: Articles
     url: /articles/
-    desc: Read articles about the web ever changing techs and best practices
+    desc: Some weird ramblings I occasionally publish and instantly forget
   - title: Projects
     url: /projects/
     desc: Projects that I have built in my spare time and that I am proud to showcase
   - title: Work
     url: /work/
-    desc: Projects that I have worked on an that I thought you may find interesting
+    desc: Stuffs that I have worked on an that you may find interesting
   - title: About
     url: /about/
-    desc: Learn about me, my personal profile, my hobbies and some other coll stuffs
+    desc: Learn about me, my hobbies and some other cool things
 
 # Front Matter settings
 defaults:
