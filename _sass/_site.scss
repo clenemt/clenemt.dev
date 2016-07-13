@@ -27,6 +27,23 @@
   background-color: $gray-dark;
 }
 
+// SITE ABOUT ====================================
+
+.site-profile {
+  float: right;
+  width: 96px;
+  height: 96px;
+  margin: -.4rem 0 0 $spacer;
+}
+
+@include mq-up(md) {
+  .site-profile {
+    width: 144px;
+    height: 144px;
+    margin: -1.2rem 0 0 3rem;
+  }
+}
+
 // SITE HEADER ====================================
 
 .site-header {

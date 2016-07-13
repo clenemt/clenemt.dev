@@ -9,6 +9,12 @@ permalink: /about/
 <div class="lead lead-about">For the past **5+ years** I've worked at [Dassault Systemes](http://www.3ds.com/fr/) as a *full stack* developer with a **UX/UI** driven background and a user centered approach.
 </div>
 
+{::nomarkdown} 
+<figure class="site-profile">
+    <img src="{{ site.baseurl }}/assets/img/profile.png">
+</figure>
+{:/}
+
 I aim to create products that make users and clients happy. True care for quality and web standards is what has always motivated me, so I approach work through *progressive enhancement*.
 
 I like simple solutions to complex problems.
