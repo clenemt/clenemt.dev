@@ -33,3 +33,11 @@ JavaScript new trends are something I follow closely. I'm able to keep up thanks
 With some background on back-end development, I have experience with PHP, Java and C/C++, so I can pick up any programming language or library quickly. I’ve also worked with plenty of **RESTful** APIs.
 
 Well documented APIs are to backend what styleguides are to frontend.
+
+---
+
+## Curriculum Vitae
+Want a more formal *about me* or something to print and read at night, grab my [Curriculum Vitae]({{ site.baseurl }}/assets/clenemt-cv.pdf).
+
+<em>Thank you for scrolling</em> <img src="{{ site.baseurl }}/assets/img/wink.png" class="emoji left">
+
