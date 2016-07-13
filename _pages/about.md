@@ -23,9 +23,12 @@ This translates in frontend development to *responsible* responsive design. It�
 ## Technical skillset
 I’m extremely fluent with CSS and its **preprocessors** (Sass, LESS, PostCSS). I’m familiar with task runners, bundlers and CI servers (Grunt, Webpack, Jenkins, Travis), content management systems (WordPress, Jekyll) and project planning software (Trello, Gitlab, Redmine).
 
-JavaScript new trends are something I follow closely. I'm able to keep up thanks to a myriad of web feeds that I'll gladly share. I like diving deep into established framework and learn more about the *underlining* concepts.
-
 **Web performance** is very important to me. I find performance budgets to be *key* for a good frontend architecture. I understand the waterfall, how browser requests work and how to optimize the above-the-fold content, with caching, conditional loading and asset optimization.
+
+> “Bottom line: performance is a fundamental component of the user experience.”<br>
+> – <em>Responsive Responsive Design</em> by [Tim Kadlec](https://24ways.org/2012/responsive-responsive-design/)
+
+JavaScript new trends are something I follow closely. I'm able to keep up thanks to a myriad of web feeds that I'll gladly share. I like diving deep into established framework and learn more about the *underlining* concepts.
 
 With some background on back-end development, I have experience with PHP, Java and C/C++, so I can pick up any programming language or library quickly. I’ve also worked with plenty of **RESTful** APIs.
 

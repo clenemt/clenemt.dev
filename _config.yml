@@ -15,7 +15,8 @@ permalink: /:year/:title/
 email: clement.moron@gmail.com
 author: Clement Moron
 twitter_username: clenemt
-github_username:  clenemt
+github_username: clenemt
+github_source: clenemt.com
 
 # Optional settings
 google_analytics: 'UA-XXXXXXXX-X'

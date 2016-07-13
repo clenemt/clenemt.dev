@@ -8,9 +8,11 @@
         {% if site.email %}
         <li><a href="mailto:{{ site.email }}">Contact</a></li>
         {% endif %}
+
         {% if site.github_username %}
         <li><a target="_blank" rel="external" href="https://github.com/{{ site.github_username }}">Github</a></li>
         {% endif %}
+
         {% if site.twitter_username %}
         <li><a target="_blank" rel="external" href="https://twitter.com/{{ site.twitter_username }}">Twitter</a></li>
         {% endif %}
@@ -19,8 +21,8 @@
 
     <div class="site-source">
       <ul>
-        <li><a href="https://github.com/{{ site.github_source }}">Source</a></li>
-        <li><a href="{{ site.baseurl }}/colophon.md">Colophon</a></li>
+        <li><a href="https://github.com/{{ site.github_username }}/{{ site.github_source }}">Source</a></li>
+        <li><a href="{{ site.baseurl }}/colophon">Colophon</a></li>
       </ul>
     </div>
   </div>

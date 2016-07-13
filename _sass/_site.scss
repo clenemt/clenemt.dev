@@ -77,7 +77,11 @@
 
 @include mq-up(sm) {
   .site-header {
-    margin: 5rem 0 $spacer2;
+    margin: $spacer4 0 $spacer2;
+  }
+
+  .site-title {
+    margin-bottom: 1.5rem;
   }
 
   .site-nav a {
@@ -87,13 +91,9 @@
 
 @include mq-up(md) {
   .site-logo {
-    margin-left: $spacer;
+    margin-left: $spacer0;
     width: 3.5rem;
     height: 3.5rem;
-  }
-
-  .site-header {
-    margin: $spacer4 0 $spacer2;
   }
 
   .site-nav {
@@ -113,6 +113,7 @@
     float: left;
     width: 20%;
     text-align: inherit;
+    margin-bottom: $spacer0;
   }
 }
 
@@ -131,13 +132,11 @@
   h2 {
     margin-top: $spacer2;
     margin-bottom: $spacer;
-    font-weight: bold;
   }
 
   h3 {
     margin-top: $spacer1;
     margin-bottom: $spacer0;
-    font-weight: bold;
     color: $gray;
   }
 }
@@ -163,7 +162,6 @@
     h3 {
       margin-top: $spacer2;
       margin-bottom: $spacer;
-      font-weight: bold;
       color: $gray;
     }
   }
@@ -178,7 +176,6 @@
   .post-title {
     color: $brand-color;
     margin-bottom: $spacer0;
-    font-weight: bold;
   }
 
   .post {
