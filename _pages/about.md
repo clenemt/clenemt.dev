@@ -6,6 +6,8 @@ desc: Learn about me, my hobbies and some other cool things.
 permalink: /about/
 ---
 
+<div class="pretty-links">
+
 <div class="lead lead-about">For the past **5+ years** I've worked at [Dassault Systemes](http://www.3ds.com/fr/) as a *full stack* developer with a **UX/UI** driven background and a user centered approach.
 </div>
 
@@ -46,4 +48,6 @@ Well documented APIs are to backend what styleguides are to frontend.
 Want a more formal *about me* or something to print and read at night, grab my [Curriculum Vitae]({{ site.baseurl }}/assets/clenemt-cv.pdf).
 
 <em>Thank you for scrolling</em> <img src="{{ site.baseurl }}/assets/img/wink.png" class="emoji left">
+
+</div>
 

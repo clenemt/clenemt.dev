@@ -30,6 +30,9 @@ h6 { font-size: $fs-h6; }
   font-size: 1.25rem;
   line-height: 1.6;
   p { margin-bottom: 1.5rem; }
+}
+
+.pretty-links {
   a { @include make-link($link-color, $link-hover-color, $body-bg); }
 }
 
