@@ -36,6 +36,7 @@
 
 .site-logo {
   width: 3rem;
+  height: 3rem;
 }
 
 .site-nav {
@@ -81,7 +82,7 @@
   }
 
   .site-title {
-    margin-bottom: 1.5rem;
+    margin-bottom: $spacer1;
   }
 
   .site-nav a {
@@ -196,7 +197,7 @@
   font-family: $font-heading;
   color: $text-muted;
   margin: -$spacer0 0 $spacer;
-  font-size: 0.875rem;
+  font-size: .875rem;
 }
 
 // Reset the responsive content
@@ -346,6 +347,7 @@ p.post-desc {
 
 .emoji {
   width: 1em;
+  height: 1em;
   vertical-align: inherit;
 
   &.right { margin-right: .3rem; }
