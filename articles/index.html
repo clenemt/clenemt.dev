@@ -2,11 +2,8 @@
 layout: page
 title: Articles
 subtitle: Things that i write about.
-desc: Read articles about the web ever changing techs and best practices.
+desc: Some weird ramblings I occasionally publish and instantly forget. Read with precautions.
 ---
-
-<p>Some weird ramblings I occasionally publish and instantly forget. Read with precautions.</p>
-
 {% if paginator.page == 1 %}
   {% for post in site.posts limit: 2 %}
 <link rel="prerender" href="{{ post.url | prepend: site.baseurl | prepend: site.url }}">
