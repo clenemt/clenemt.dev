@@ -70,6 +70,7 @@
 .post-list {
   list-style: none;
   padding-left: 0;
+  margin-top: $spacer2;
 
   .post-title {
     color: $brand-color;
@@ -78,7 +79,6 @@
 
   .post {
     margin-bottom: $spacer2;
-    font-size: 1rem;
   }
 }
 
