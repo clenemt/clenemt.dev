@@ -2,7 +2,7 @@
 layout: page
 title: Dashboard
 subtitle: A new kind of dashboard.
-desc: A dash-boarding service for businesses to work collaboratively.
+desc: A dashboarding service for businesses to work collaboratively.
 permalink: /work/dashboard/
 ---
 
@@ -31,7 +31,7 @@ Users where separated into *roles*, based on which of Dassault Systemes [solutio
 ![]({{ site.baseurl }}/assets/img/dashboard-filter.jpg)
 *A user filtering his dashboard.*
 
-Some of the benefits of this solution included:
+Some of the **benefits** of this solution included:
 
 * Visual presentation of performance measures
 * Ability to identify and correct negative trends
