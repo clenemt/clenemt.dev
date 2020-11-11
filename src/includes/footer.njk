@@ -1,0 +1,32 @@
+<footer role="contentinfo">
+  <div class="container">
+  <div>
+    <span>&copy; copyright {{ build.timestamp | formatDate('yyyy') }}</span>
+    <a href="http://github.com/clenemt/clenemt.com">{% icon "github" %}Github</a>
+    </div>
+
+    <div>
+      <ul>
+        {% if site.email %}
+        <li><a href="mailto:{{ site.email }}">Contact</a></li>
+        {% endif %}
+
+        {% if site.github_user %}
+        <li><a target="_blank" href="https://github.com/{{ site.github_user }}">Github</a></li>
+        {% endif %}
+
+        {% if site.twitter_user %}
+        <li><a target="_blank" href="https://twitter.com/{{ site.twitter_user }}">Twitter</a></li>
+        {% endif %}
+      </ul>
+    </div>
+
+    <div>
+      <ul>
+        <li><a target="_blank" href="https://github.com/{{ site.github_user }}/{{ site.name }}">Source</a></li>
+        <li><a href="/colophon">Colophon</a></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+</footer>

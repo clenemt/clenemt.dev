@@ -1,0 +1,14 @@
+<section>
+  {% for note in collections.notes | reverse %}
+  <article>
+    <div>
+      <time datetime="{{ note.date | formatDate('yyyy-MM-dd') }}">
+        {{ note.date | formatDate('dd LLL yyyy') }}
+      </time>
+      <div>
+        {{ note.templateContent | safe }}
+      </div>
+    </div>
+  </article>
+  {% endfor %}
+</section>

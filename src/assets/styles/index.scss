@@ -1,0 +1,43 @@
+$blue: darkslateblue;
+$bg-body: antiquewhite;
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+// A general comment that should be
+// stripped out in production
+body {
+  color: $blue;
+  background-color: $bg-body;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+
+  img { width: 6rem; }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.icon {
+  display: inline-block;
+  height: 1em;
+  width: 1em;
+  margin-right: .25em;
+  vertical-align: middle;
+  font-size: 1.5em;
+  fill: currentColor;
+  pointer-events: none;
+}

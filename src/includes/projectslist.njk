@@ -1,0 +1,15 @@
+<section>
+  {% for project in collections.projects | reverse %}
+  <article>
+    <h2>
+      <a href="{{ project.url | url }}">{{ project.data.title }}</a>
+    </h2>
+
+    <div>
+      <time datetime="{{ project.date | formatDate('yyyy-MM-dd') }}">
+        {{ project.date | formatDate('dd LLL yyyy') }}
+      </time>
+    </div>
+  </article>
+  {% endfor %}
+</section>
