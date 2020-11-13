@@ -2,6 +2,7 @@
 layout: default
 title: Swym
 image: swym-post.jpg
+tags: work
 description: An enterprise social network for interacting between employees.
 ---
 

@@ -26,7 +26,6 @@ module.exports = (config) => {
   config.addPlugin(ErrorOverlayPlugin);
 
   // Filters
-  config.addFilter('log', filters.log);
   config.addFilter('formatDate', filters.formatDate);
 
   // Shortcodes
@@ -42,7 +41,6 @@ module.exports = (config) => {
   config.addCollection('projects', (collection) =>
     collection.getFilteredByGlob('src/projects/*.md')
   );
-
   config.addCollection('notes', (collection) =>
     collection.getFilteredByGlob('src/notes/*.md')
   );

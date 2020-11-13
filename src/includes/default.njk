@@ -18,11 +18,11 @@
     <link rel="stylesheet" href="{% webpack 'main.css' %}">
   </head>
   <body class="{{ bodyClass }}">
-    <a href="#main" class="sr-skip-link">skip to main content</a>
+    <a href="#main" class="visually-hidden-focusable">skip to main content</a>
 
-    <div class="layout" role="document">
+    <div class="site" role="document">
       {% include "header.njk" %}
-      <main id="main" class="main" tabindex="-1">
+      <main id="main" class="site__content" tabindex="-1">
         {{ content | safe }}
       </main>
       {% include "footer.njk" %}

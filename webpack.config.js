@@ -24,9 +24,6 @@ module.exports = {
   ],
   output: {
     filename: isDev ? '[name].js' : '[name].[contenthash].js',
-    assetModuleFilename: isDev
-      ? 'images/[name].[ext]'
-      : 'images/[contenthash].[ext]',
     path: path.resolve(__dirname, '_site/assets'),
     publicPath: '/assets/'
   },
@@ -67,8 +64,24 @@ module.exports = {
       },
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
-        type: 'asset'
+        type: 'asset',
+        generator: {
+          filename: `images/${isDev ? '[name][ext]' : '[contenthash][ext]'}`
+        }
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: `fonts/${isDev ? '[name][ext]' : '[contenthash][ext]'}`
+        }
       }
     ]
+  },
+  resolve: {
+    alias: {
+      // Helpful alias for importing assets
+      assets: path.resolve(__dirname, 'src/assets')
+    }
   }
 };

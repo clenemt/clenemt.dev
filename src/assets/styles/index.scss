@@ -1,43 +1,29 @@
-$blue: darkslateblue;
-$bg-body: antiquewhite;
+//
+// Utilities
+//
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  font-family: 'Courier New', Courier, monospace;
-}
+@import 'utils/functions';
+@import 'utils/variables';
+@import 'utils/mixins';
 
-// A general comment that should be
-// stripped out in production
-body {
-  color: $blue;
-  background-color: $bg-body;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
+//
+// Base
+//
 
-main {
-  display: flex;
-  flex-grow: 1;
-  align-items: center;
+@import 'base/fonts';
+@import 'base/reboot';
+// @import 'base/typography';
+// @import 'base/focus';
+// @import 'base/screenreader';
+// @import 'base/animation';
+@import 'base/layout';
+@import 'base/utilities';
 
-  img { width: 6rem; }
-}
+//
+// Components
+//
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.icon {
-  display: inline-block;
-  height: 1em;
-  width: 1em;
-  margin-right: .25em;
-  vertical-align: middle;
-  font-size: 1.5em;
-  fill: currentColor;
-  pointer-events: none;
-}
+// @import 'components/header';
+// @import 'components/nav';
+// @import 'components/footer';
+// @import 'components/icon';

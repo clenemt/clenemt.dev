@@ -1,5 +1,5 @@
 <section>
-  {% for project in collections.projects | reverse %}
+  {% for project in projects | reverse %}
   <article>
     <h2>
       <a href="{{ project.url | url }}">{{ project.data.title }}</a>
