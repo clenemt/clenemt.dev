@@ -26,7 +26,10 @@ module.exports = (config) => {
   config.addPlugin(ErrorOverlayPlugin);
 
   // Filters
-  config.addFilter('formatDate', filters.formatDate);
+  config.addFilter('format', filters.format);
+  config.addFilter('formatISO', filters.formatISO);
+  config.addFilter('prev', filters.prev);
+  config.addFilter('next', filters.next);
 
   // Shortcodes
   config.addShortcode('icon', shortcodes.icon);

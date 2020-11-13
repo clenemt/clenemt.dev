@@ -22,3 +22,11 @@
     max-width: $container-narrow-max-width;
   }
 }
+
+.project {
+
+  &__image {
+    margin-left: -30%;
+    margin-right: -30%;
+  }
+}

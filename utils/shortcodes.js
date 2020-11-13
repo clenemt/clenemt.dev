@@ -4,7 +4,8 @@ const { outdent } = require('outdent');
 const Image = require('@11ty/eleventy-img');
 const markdown = require('./markdown');
 
-const defaultSize = '90vw, (min-width: 1280px) 1152px';
+const defaultSizes = '90vw, (min-width: 1280px) 1152px';
+const defaultImagesSizes = [1920, 1280, 640, 320];
 
 const isFullUrl = (url) => {
   try {
@@ -40,15 +41,15 @@ module.exports = {
     </svg>`,
 
   // Allow embedding responsive images
-  // {% image "mountains.jpeg", "Picture of someone on top of a mountain", "90vw" %}
-  image: async (src, alt, sizes = defaultSize, lazy = true) => {
+  // {% image "mountains.jpeg", "Picture of someone on top of a mountain", "A mountain I climbed", "90vw" %}
+  image: async (src, alt, title, sizes = defaultSizes, lazy = true) => {
     const extension = path.extname(src).slice(1).toLowerCase();
     const fullSrc = isFullUrl(src) ? src : `./src/assets/images/${src}`;
 
     let stats;
     try {
       stats = await Image(fullSrc, {
-        widths: [1920, 1280, 640, 320],
+        widths: defaultImagesSizes,
         formats: extension === 'webp' ? ['webp', 'jpeg'] : ['webp', extension],
         urlPath: '/assets/images/',
         outputDir: '_site/assets/images/'
@@ -60,7 +61,7 @@ module.exports = {
       return '';
     }
     const fallback = stats[extension].reverse()[0];
-    return `<picture>
+    const picture = `<picture>
       ${Object.values(stats)
         .map(
           (image) =>
@@ -75,5 +76,11 @@ module.exports = {
         width="${fallback.width}"
         height="${fallback.height}" alt="${alt}">
     </picture>`;
+    return title
+      ? `<figure>
+          ${picture}
+          <figcaption>${markdown.render(title)}</figcaption>
+        </figure>`
+      : picture;
   }
 };

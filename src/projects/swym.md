@@ -1,18 +1,16 @@
 ---
-layout: default
 title: Swym
-image: swym-post.jpg
-tags: work
+image: swym.png
 description: An enterprise social network for interacting between employees.
+date: 2010-01-01
+tags: work
 ---
-
-<div class="container">
 
 # A bold enterprise social network
 
 Imagine an organization that is completely digitally connected.
 
-During my stay at Dassault Systemes, I was asked to participate in the development of an **in-house** enterprise social network. The goal was to start small then expand to other companies.
+During my stay at Dassault Systèmes, I was asked to participate in the development of an **in-house** enterprise social network. The goal was to start small then expand to other companies.
 
 It seemed a **good idea at the time**, Facebook was racking up users by the millions and so everybody in the corporate world wanted a slice of the cake. Companies like [Yammer](https://www.yammer.com/), Jive, [Chatter](http://www.salesforce.com/eu/chatter/overview/), IBM or Microsoft jumped on the _bandwagon_ and so we did too.
 
@@ -24,17 +22,13 @@ Nonetheless we went on and built our own little social platform. It was called *
 
 ## Swym
 
-Instead of being user centric like our competitors, we leaned towards **communities**. A user would join a number of communities and interact with them through posts, images, wikis, questions or simply by reading articles.
+Instead of being user centric like our competitors, we leaned towards **communities**. A user would join a number of communities and interact with them through posts, images, wikis, questions or 3D contents.
 
-{% image "swym-home.jpg", "The first iteration of the news stream" %}
-
-_The first iteration of the news stream._
+{% image "swym-home.jpg", "Website showing the news feed as a list of posts with images", "The first iteration of the news stream" %}
 
 All the communities he belonged to would be part of his news stream. He was then able to drill down inside any specific community.
 
-{% image "swym-post.jpg", "The first iteration of the news stream" %}
-
-_A community home page._
+{% image "swym-post.jpg", "Website showing a community homepage with a list of posts", "A community home page" %}
 
 ## Features
 
@@ -49,8 +43,6 @@ Swym featured:
 
 ## Tech
 
-Swym was built using **Java** as a backend, a little bit of **node.js** for the notification systems and a lot of **javascript** on the front-end. It was mostly a _Single Page Application_ (SPA) built with an **in-house** javascript framework.
+Swym was built using **Java** for backend, a little bit of **Node.js** for the notification systems and a lot of **Javascript** on the front-end. It was mostly a Single Page Application (SPA) built with an **in-house** javascript framework.
 
 Many teams were involved throughout the journey and it was a fun project to be part of.
-
-</div>

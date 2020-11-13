@@ -6,8 +6,8 @@
     </h2>
 
     <div>
-      <time datetime="{{ project.date | formatDate('yyyy-MM-dd') }}">
-        {{ project.date | formatDate('dd LLL yyyy') }}
+      <time datetime="{{ project.date | formatISO }}">
+        {{ project.date | format('LLL yyyy') }}
       </time>
     </div>
   </article>

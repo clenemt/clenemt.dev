@@ -1,0 +1,33 @@
+---
+layout: default
+---
+
+<article
+  id="{{ title | slug }}"
+  class="container project"
+  aria-labelledby="{{ title | slug }}-title">
+
+  <header class="project__header">
+    <h1 id="{{ title | slug }}-title" class="project__title">{{ subtitle or title }}</h1>
+    <div class="project__meta">
+      <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLL yyyy') }}</time>
+      {% if tags %}
+      <span class="project__tags">{{ tags | join(', ') }}</span>
+      {% endif %}
+      <div class="project__image">{% image image, subtitle or title %}</div>
+    </div>
+  </header>
+
+  <div class="page__content">
+    {{ content | safe }}
+  </div>
+
+  {% set prev = collections.projects | prev(page) %}
+  {% set next = collections.projects | next(page) %}
+
+  <nav arial-label="Project pagination">
+    {% if prev %}<a href="{{ prev.url }}">Previous</a>{% endif %}
+    {% if next %}<a href="{{ next.url }}">Next</a>{% endif %}
+  </nav>
+
+</article>
