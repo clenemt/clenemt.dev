@@ -2,7 +2,7 @@
 
 This is the source code for [clenemt.com](http://clenemt.com). Scaffolded from [eleventy-webpack](https://github.com/clenemt/eleventy-webpack).
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/c952af3b-547a-40a6-a999-a7966a846b2c/deploy-status)](https://app.netlify.com/sites/eleventy-webpack/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0446bd6a-a29f-4303-9b6b-00924c5cf210/deploy-status)](https://app.netlify.com/sites/clenemt/deploys)
 
 ## Features
 
