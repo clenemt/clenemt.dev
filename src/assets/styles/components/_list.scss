@@ -1,0 +1,12 @@
+.list {
+
+  &--inline {
+    padding: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+
+    .list__item + .list__item {
+      margin-left: .25rem;
+    }
+  }
+}
