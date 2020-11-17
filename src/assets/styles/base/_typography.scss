@@ -33,6 +33,15 @@ strong {
   font-weight: bolder;
 }
 
+.lead {
+  color: $blue-700;
+  font-size: $font-size-medium;
+
+  @include mq-up(md) {
+    font-size: $font-size-large;
+  }
+}
+
 ::selection {
   background: $blue;
   color: #fff;

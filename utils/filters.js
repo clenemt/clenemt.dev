@@ -1,12 +1,21 @@
 const util = require('util');
-const { format, formatISO } = require('date-fns');
+const {
+  format,
+  formatISO,
+  formatDistanceToNowStrict,
+  parseISO,
+  isDate
+} = require('date-fns');
 const markdown = require('./markdown');
 
 module.exports = {
-  log: (data) => console.log(`\n\n${util.inspect(data)}\n\n`),
   format: format,
-  markdown: (content) => markdown.renderInline(content),
   formatISO: formatISO,
+  formatDistanceToNowStrict: (date) =>
+    formatDistanceToNowStrict(isDate(date) ? date : parseISO(date)),
+
+  log: (data) => console.log(`\n\n${util.inspect(data)}\n\n`),
+  markdown: (content) => markdown.renderInline(content),
   next: (collection, itemToFind) => {
     const index = collection.findIndex(
       (item) => item.inputPath === itemToFind.inputPath

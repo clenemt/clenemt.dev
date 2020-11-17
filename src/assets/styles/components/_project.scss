@@ -1,30 +1,9 @@
 .project {
-  font-size: $font-size-medium;
-  line-height: 1.6;
-
-  .project__content {
-    h1 {
-      margin-top: 3rem;
-      margin-bottom: 2rem;
-    }
-
-    h2 {
-      margin-top: 3rem;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      margin-bottom: 1.5rem;
-    }
-  }
-
-  picture {
-    display: block;
-    @include extend;
-  }
 
   // Only add background gray to project images
   .project__content picture {
+    display: block;
+    @include extend;
     background-color: $gray-200;
     padding: 8rem 4rem;
   }
@@ -36,16 +15,11 @@
   }
 
   figcaption {
+    margin-top: -1rem;
     text-align: center;
     font-size: $font-size-base;
     font-style: italic;
     color: $gray-600;
-    margin-top: -1rem;
-  }
-
-  .lead {
-    color: $blue-700;
-    font-size: $font-size-large;
   }
 
   .img-fluid {

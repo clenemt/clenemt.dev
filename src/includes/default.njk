@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="{{ htmlClass }}" lang="{{ site.lang }}">
+<html lang="{{ site.lang }}">
   <head>
     <meta charset="utf-8">
     <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title or site.name}}{% endif %}</title>
@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="{% webpack 'main.css' %}">
   </head>
-  <body class="{{ bodyClass }}">
+  <body>
     <a href="#main" class="visually-hidden-focusable">skip to main content</a>
 
     <div class="site" role="document">

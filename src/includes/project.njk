@@ -4,7 +4,7 @@ layout: default
 
 <article
   id="{{ title | slug }}"
-  class="container project"
+  class="container project page"
   aria-labelledby="{{ title | slug }}-title">
 
   <header class="project__header">
@@ -14,7 +14,7 @@ layout: default
       {% endif %}
     </div>
     <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLLL yyyy') }}</time>
-    <div class="project__image">{% image image, subtitle or title, subtitle, false %}</div>
+    <div class="project__image">{% image image, subtitle or title, null, null, false %}</div>
   </header>
 
   <div class="project__content">

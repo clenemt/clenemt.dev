@@ -1,0 +1,21 @@
+.page {
+
+  @include mq-up(md) {
+    font-size: $font-size-medium;
+    line-height: 1.6;
+  }
+
+  h1 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+  }
+}

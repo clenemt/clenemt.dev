@@ -42,7 +42,7 @@ module.exports = {
 
   // Allow embedding responsive images
   // {% image "mountains.jpeg", "Picture of someone on top of a mountain", "A mountain I climbed", "90vw" %}
-  image: async (src, alt, title, lazy = true, sizes = defaultSizes) => {
+  image: async (src, alt, title, className, lazy = true, sizes = defaultSizes) => {
     const extension = path.extname(src).slice(1).toLowerCase();
     const fullSrc = isFullUrl(src) ? src : `./src/assets/images/${src}`;
 
@@ -71,7 +71,7 @@ module.exports = {
         )
         .join('\n')}
       <img
-        class="img-fluid"
+        class="img-fluid ${className || ''}"
         loading="${lazy ? 'lazy' : 'eager'}"
         src="${fallback.url}"
         width="${fallback.width}"

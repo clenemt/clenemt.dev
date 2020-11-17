@@ -1,0 +1,10 @@
+.profile-picture {
+  float: right;
+  width: 6rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+
+  @include mq-up(md) {
+    width: 10rem;
+  }
+}

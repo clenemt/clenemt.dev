@@ -33,8 +33,10 @@ module.exports = (config) => {
   // Shortcodes
   config.addShortcode('icon', shortcodes.icon);
   config.addPairedShortcode('markdown', shortcodes.markdown);
-  config.addNunjucksAsyncShortcode('image', shortcodes.image);
   config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
+  config.addNunjucksAsyncShortcode('image', shortcodes.image);
+  config.addPairedNunjucksAsyncShortcode('imageleft', shortcodes.imageleft);
+  config.addPairedNunjucksAsyncShortcode('imageright', shortcodes.imageright);
 
   // Transforms
   config.addTransform('html-min', transforms.htmlmin);

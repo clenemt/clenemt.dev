@@ -16,13 +16,18 @@
 }
 
 .extend {
-  margin-right: -3rem;
-  margin-left: -3rem;
+  @include extend;
 }
 
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .d-flex {
