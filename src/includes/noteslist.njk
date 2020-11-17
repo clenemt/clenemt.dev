@@ -2,6 +2,7 @@
   {% for note in collections.notes | reverse %}
   <article>
     <div>
+      {% if note.data.title %}<h1>{{ note.data.title | markdown | safe }}</h1>{% endif %}
       <time datetime="{{ note.date | formatISO }}">
         {{ note.date | format('dd LLL yyyy') }}
       </time>

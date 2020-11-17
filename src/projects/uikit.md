@@ -3,9 +3,7 @@ title: UIKit
 image: swym-post.jpg
 subtitle: How a living style guide for Dassault Systèmes came to be.
 description: How a living style guide for Dassault Systèmes came to be.
-tags: 
-  - work
-  - open-source
+tags: [work, open-source]
 ---
 
 Living style guides are to front-end what well thought APIs are to backend. Essentials.

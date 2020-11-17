@@ -39,10 +39,10 @@ main {
 }
 
 hr {
-  height: $border-width;
-  margin: 1rem 0;
+  height: 5px;
+  margin: 1rem 0 1.5rem;
   color: inherit;
-  background-color: currentColor;
+  background-color: $blue-300;
   border: 0;
   opacity: 0.25;
   // Show the overflow in Edge and IE
@@ -71,12 +71,6 @@ a:not([href]):not([class]) {
     color: inherit;
     text-decoration: none;
   }
-}
-
-b,
-strong {
-  // Add the correct font weight in Chrome, Edge, and Safari
-  font-weight: bolder;
 }
 
 //
@@ -220,21 +214,13 @@ th {
   border-width: 0;
 }
 
+//
+// Forms
+//
+
 button {
   // Remove the default `border-radius` that macOS Chrome adds
   border-radius: 0;
-}
-
-button,
-input {
-  // Show the overflow in Edge
-  overflow: visible;
-}
-
-button,
-select {
-  // Remove the inheritance of text transform in Firefox
-  text-transform: none;
 }
 
 // Work around a Firefox bug where the transparent `button` background
@@ -244,9 +230,27 @@ button:focus {
   outline: -webkit-focus-ring-color auto 5px;
 }
 
+button,
+select {
+  // Remove the inheritance of text transform in Firefox
+  text-transform: none;
+}
+
 [role='button'] {
   // Set the cursor for non-`<button>` buttons
   cursor: pointer;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  // Correct the inability to style clickable types in iOS and Safari
+  -webkit-appearance: button;
+  &:not(:disabled) {
+    // Add "hand" cursor to non-disabled button elements.
+    cursor: pointer;
+  }
 }
 
 input,
@@ -262,26 +266,6 @@ textarea {
   line-height: inherit;
 }
 
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  // Correct the inability to style clickable types in iOS and Safari
-  -webkit-appearance: button;
-  &:not(:disabled) {
-    // Add "hand" cursor to non-disabled button elements.
-    cursor: pointer;
-  }
-}
-
-button,
-[type='button'],
-[type='reset'],
-[type='submit'] {
-  // Correct the inability to style clickable types in iOS and Safari
-  -webkit-appearance: button;
-}
-
 // Remove inner border and padding from Firefox
 ::-moz-focus-inner {
   padding: 0;
@@ -291,6 +275,10 @@ button,
 label {
   // Allow labels to use `margin` for spacing
   display: inline-block;
+}
+
+select {
+  word-wrap: normal;
 }
 
 textarea {
@@ -341,16 +329,16 @@ textarea {
   height: auto;
 }
 
+::file-selector-button {
+  // Inherit font family and line height for file input buttons
+  font: inherit;
+}
+
 ::-webkit-file-upload-button {
   // Change font properties to `inherit` in Safari
   font: inherit;
   // Correct the inability to style clickable types in iOS and Safari
   -webkit-appearance: button;
-}
-
-::file-selector-button {
-  // Inherit font family and line height for file input buttons
-  font: inherit;
 }
 
 // Future-proof rule: in browsers that support :focus-visible, suppress the focus outline

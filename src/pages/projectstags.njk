@@ -6,6 +6,7 @@ pagination:
   filter:
     - all
     - projects
+    - notes
 permalink: /projects/{{ tag }}/
 layout: default
 renderData:
@@ -15,7 +16,6 @@ renderData:
 
 <div class="container">
   <h1>Projects tagged “{{ tag }}”</h1>
-
-  {% set projects = collections.projects[tag] %}
+  {% set projects = collections[tag] %}
   {% include "projectslist.njk" %}
 </div>

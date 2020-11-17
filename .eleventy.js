@@ -26,10 +26,9 @@ module.exports = (config) => {
   config.addPlugin(ErrorOverlayPlugin);
 
   // Filters
-  config.addFilter('format', filters.format);
-  config.addFilter('formatISO', filters.formatISO);
-  config.addFilter('prev', filters.prev);
-  config.addFilter('next', filters.next);
+  Object.keys(filters).forEach((key) => {
+    config.addFilter(key, filters[key]);
+  });
 
   // Shortcodes
   config.addShortcode('icon', shortcodes.icon);
@@ -54,12 +53,11 @@ module.exports = (config) => {
   // Everything inside static is copied verbatim to `_site`
   config.addPassthroughCopy('src/assets/static');
 
-  // Make eleventy aware of the manifest file
-  config.addWatchTarget(manifestPath);
-
   // BrowserSync Overrides
   config.setBrowserSyncConfig({
     ...config.browserSyncConfig,
+    // Reload when manifest file changes
+    files: [manifestPath],
     // Show 404 page on invalid urls
     callbacks: {
       ready: (err, browserSync) => {

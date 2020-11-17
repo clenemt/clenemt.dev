@@ -8,26 +8,29 @@ layout: default
   aria-labelledby="{{ title | slug }}-title">
 
   <header class="project__header">
-    <h1 id="{{ title | slug }}-title" class="project__title">{{ subtitle or title }}</h1>
-    <div class="project__meta">
-      <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLL yyyy') }}</time>
-      {% if tags %}
-      <span class="project__tags">{{ tags | join(', ') }}</span>
+    <div class="project__title-wrapper">
+      <h1 id="{{ title | slug }}-title" class="project__title">{{ subtitle or title }}</h1>
+      {% if tags %}<span class="project__tags">{% for tag in tags %}<a href="/projects/{{ tag }}" class="project__tag">{{ tag }}</a>{% endfor%}</span>
       {% endif %}
-      <div class="project__image">{% image image, subtitle or title %}</div>
     </div>
+    <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLLL yyyy') }}</time>
+    <div class="project__image">{% image image, subtitle or title, subtitle, false %}</div>
   </header>
 
-  <div class="page__content">
+  <div class="project__content">
     {{ content | safe }}
   </div>
 
   {% set prev = collections.projects | prev(page) %}
   {% set next = collections.projects | next(page) %}
 
-  <nav arial-label="Project pagination">
-    {% if prev %}<a href="{{ prev.url }}">Previous</a>{% endif %}
-    {% if next %}<a href="{{ next.url }}">Next</a>{% endif %}
+  <nav class="project__pagination pagination" arial-label="Project pagination">
+    <div class="pagination__item pagination__item--prev">
+      {% if prev %}<a class="pagination__link" href="{{ prev.url }}">← Previous</a>{% endif %}
+    </div>
+    <div class="pagination__item pagination__item--next">
+      {% if next %}<a class="pagination__link" href="{{ next.url }}">Next →</a>{% endif %}
+    </div>
   </nav>
 
 </article>

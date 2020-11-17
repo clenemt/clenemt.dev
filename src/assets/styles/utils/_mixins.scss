@@ -1,4 +1,4 @@
-@mixin mq($name) {
+@mixin mq-up($name) {
   $min: breakpoint-min($name, $breakpoints);
   @if $min {
     @media (min-width: $min) {
@@ -20,12 +20,10 @@
   }
 }
 
-// @mixin hover-focus {
-//   &:hover,
-//   &:focus {
-//     @content;
-//   }
-// }
+@mixin extend {
+  margin-right: -3rem;
+  margin-left: -3rem;
+}
 
 // @mixin hyphenate() {
 //   word-wrap: break-word;

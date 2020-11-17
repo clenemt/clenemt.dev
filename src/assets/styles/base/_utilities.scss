@@ -14,3 +14,17 @@
   white-space: nowrap !important;
   border: 0 !important;
 }
+
+.extend {
+  margin-right: -3rem;
+  margin-left: -3rem;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.d-flex {
+  display: flex;
+}
