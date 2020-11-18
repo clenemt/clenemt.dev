@@ -13,9 +13,6 @@
 @import 'base/fonts';
 @import 'base/reboot';
 @import 'base/typography';
-// @import 'base/focus';
-// @import 'base/screenreader';
-// @import 'base/animation';
 @import 'base/layout';
 @import 'base/utilities';
 
@@ -24,6 +21,7 @@
 //
 
 @import 'components/list';
+@import 'components/icons';
 @import 'components/header';
 @import 'components/footer';
 @import 'components/page';

@@ -30,6 +30,14 @@
   clear: both;
 }
 
+.fs-small {
+  font-size: $small-font-size;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
 .d-flex {
   display: flex !important;
 }

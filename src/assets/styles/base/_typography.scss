@@ -36,6 +36,8 @@ strong {
 .lead {
   color: $blue-700;
   font-size: $font-size-medium;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
 
   @include mq-up(md) {
     font-size: $font-size-large;

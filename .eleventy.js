@@ -73,9 +73,11 @@ module.exports = (config) => {
 
   return {
     dir: { input: 'src', output: '_site', includes: 'includes', data: 'data' },
-    // Allow nunjuks, markdown and 11ty files to be processed
+    // Allow nunjucks, markdown and 11ty files to be processed
     templateFormats: ['njk', 'md', '11ty.js'],
     htmlTemplateEngine: 'njk',
+    // Allow pre-processing `.md` files with nunjucks
+    // thus transforming the shortcodes
     markdownTemplateEngine: 'njk'
   };
 };

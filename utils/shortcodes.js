@@ -4,6 +4,7 @@ const { outdent } = require('outdent');
 const Image = require('@11ty/eleventy-img');
 const markdown = require('./markdown');
 
+const iconDefaultSize = 24;
 const defaultSizes = '90vw, (min-width: 1280px) 1152px';
 const defaultImagesSizes = [1920, 1280, 640, 320];
 
@@ -34,11 +35,18 @@ module.exports = {
     }),
 
   // Allow embedding svg icon
-  // {% icon "github.svg", "my-class" %}
-  icon: (name, className = '') =>
-    `<svg class="icon icon--${name} ${className}" role="img" aria-hidden="true">
+  // {% icon "github.svg", "my-class", [24, 24] %}
+  icon: (name, className, size = iconDefaultSize) => {
+    if (!Array.isArray(size)) size = [size];
+    return outdent({ newline: '' })`
+    <svg class="icon icon--${name} ${
+      className || ''
+    }" role="img" aria-hidden="true" width="${size[0]}" height="${
+      size[1] || size[0]
+    }">
       <use xlink:href="/assets/images/sprite.svg#${name}"></use>
-    </svg>`,
+    </svg>`;
+  },
 
   // Allow embedding responsive images
   // {% image "image.jpeg", "Image alt", "Image title", "my-class" %}
@@ -69,7 +77,8 @@ module.exports = {
     }
 
     const fallback = stats[extension].reverse()[0];
-    const picture = `<picture>
+    const picture = outdent({ newline: '' })`
+    <picture>
       ${Object.values(stats)
         .map(
           (image) =>
@@ -86,10 +95,11 @@ module.exports = {
         height="${fallback.height}" alt="${alt}">
     </picture>`;
     return title
-      ? `<figure>
-          ${picture}
-          <figcaption>${markdown.renderInline(title)}</figcaption>
-        </figure>`
+      ? outdent({ newline: '' })`
+      <figure>
+        ${picture}
+        <figcaption>${markdown.renderInline(title)}</figcaption>
+      </figure>`
       : picture;
   }
 };

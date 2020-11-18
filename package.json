@@ -32,7 +32,6 @@
     "cross-env": "^7.0.2",
     "css-loader": "^5.0.1",
     "date-fns": "^2.16.1",
-    "deasync": "^0.1.21",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "html-minifier": "^4.0.0",
     "js-yaml": "^3.14.0",

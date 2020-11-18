@@ -31,7 +31,8 @@
     align-items: center;
   }
 
-  &__title {
+  // To override specificity of `.page h1`
+  & &__title {
     margin-bottom: 0;
   }
 
