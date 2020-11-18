@@ -41,8 +41,15 @@ module.exports = {
     </svg>`,
 
   // Allow embedding responsive images
-  // {% image "mountains.jpeg", "Picture of someone on top of a mountain", "A mountain I climbed", "90vw" %}
-  image: async (src, alt, title, className, lazy = true, sizes = defaultSizes) => {
+  // {% image "image.jpeg", "Image alt", "Image title", "my-class" %}
+  image: async (
+    src,
+    alt,
+    title,
+    className,
+    lazy = true,
+    sizes = defaultSizes
+  ) => {
     const extension = path.extname(src).slice(1).toLowerCase();
     const fullSrc = isFullUrl(src) ? src : `./src/assets/images/${src}`;
 
@@ -60,6 +67,7 @@ module.exports = {
       console.log(`  ${e}\n`);
       return '';
     }
+
     const fallback = stats[extension].reverse()[0];
     const picture = `<picture>
       ${Object.values(stats)

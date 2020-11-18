@@ -13,8 +13,6 @@ module.exports = (config) => {
   const manifestPath = path.resolve(__dirname, '_site/assets/manifest.json');
 
   // Allow for customizing the built in markdown parser.
-  // We add more natural line breaks anchor tag for headings
-  // and attribute properties
   config.setLibrary('md', markdown);
 
   // Allow eleventy to understand yaml files
@@ -33,10 +31,8 @@ module.exports = (config) => {
   // Shortcodes
   config.addShortcode('icon', shortcodes.icon);
   config.addPairedShortcode('markdown', shortcodes.markdown);
-  config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
   config.addNunjucksAsyncShortcode('image', shortcodes.image);
-  config.addPairedNunjucksAsyncShortcode('imageleft', shortcodes.imageleft);
-  config.addPairedNunjucksAsyncShortcode('imageright', shortcodes.imageright);
+  config.addNunjucksAsyncShortcode('webpack', shortcodes.webpack);
 
   // Transforms
   config.addTransform('html-min', transforms.htmlmin);
