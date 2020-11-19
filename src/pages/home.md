@@ -4,9 +4,11 @@ permalink: /
 title: Clement Moron
 ---
 
-<div class="container home">
+<div class="container page home">
 
-Hi! I’m **Clement Moron**, a [frontend architect](about/), [writer](notes/) and [definitely not]{.select-hide .select-hide--2} professional climber.
+# [Hello I’m Clement]{.page__title-pre .fw-bold} a frontend architect.{.page__title}
+
+I'm also a [writer](notes/) and [definitely not]{.select-hide .select-hide--2} professional climber.
 
 I like [building](projects/work/) stuffs and [experimenting](projects/open-source/) with [strange things]{.select-hide .select-hide--1}.
 

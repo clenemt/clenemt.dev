@@ -15,7 +15,7 @@ $gray-900: #212529;
 $black: #000;
 
 $gray: $gray-500;
-$blue: #4072AF;
+$blue: #4072af;
 $indigo: #6610f2;
 $purple: #6f42c1;
 $pink: #d63384;
@@ -80,16 +80,15 @@ $font-family-base: $font-family-serif;
 
 $font-size-root: 100%;
 
-$font-size-base: 1rem;
 $font-size-extra-small: 0.75rem;
-$font-size-small: 0.875rem;
-$font-size-medium: 1.25rem;
-$font-size-large: 1.5rem;
-$font-size-extra-large: 2.5rem;
+$font-size-small: 1rem; // 16px
+$font-size-base: 1.125rem; // 18px
+$font-size-medium: 1.25rem; // 20px
+$font-size-large: 1.5rem; // 25px
+$font-size-extra-large: 2.5rem; // 40px
 $font-size-extra-extra-large: 3rem;
 
-$line-height-base: 1.5;
-$line-height-medium: 1.6;
+$line-height-base: 1.6;
 
 $font-weight-base: 400;
 

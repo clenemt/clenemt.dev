@@ -1,5 +1,4 @@
 .projectlist {
-
   &__item {
     margin-bottom: 3rem;
   }
@@ -14,21 +13,24 @@
   }
 
   &__meta {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
     display: flex;
     align-items: center;
 
     @include mq-up(md) {
-      margin-bottom: .75rem;
+      margin-bottom: 0.75rem;
     }
   }
 
   &__date {
     color: $gray-600;
-    font-size: $font-size-base;
+    font-size: $font-size-small;
   }
 
   #{&}__excerpt {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
+    @include mq-up(md) {
+      margin-bottom: 0.5rem;
+    }
   }
 }

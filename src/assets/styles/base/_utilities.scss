@@ -31,11 +31,19 @@
 }
 
 .fs-small {
-  font-size: $small-font-size;
+  font-size: $font-size-small;
+}
+
+.fs-large {
+  font-size: $font-size-large;
 }
 
 .fw-normal {
   font-weight: normal;
+}
+
+.fw-bold {
+  font-weight: 700;
 }
 
 .d-flex {
