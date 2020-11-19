@@ -43,6 +43,7 @@
   &__link {
     text-decoration: none;
     padding: 0.25rem 0.5rem;
+    transition: background-color 0.1s ease-in;
 
     &:hover,
     &:focus {

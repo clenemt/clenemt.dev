@@ -4,7 +4,7 @@ permalink: /
 title: Clement Moron
 ---
 
-<div class="container page">
+<div class="container home">
 
 Hi! I’m **Clement Moron**, a [frontend architect](about), [writer](notes) and [not so]{.select-hide} talented climber. I work as a nexus between design and frontend, [making websites](projects/work) scalable and lightning fast.
 

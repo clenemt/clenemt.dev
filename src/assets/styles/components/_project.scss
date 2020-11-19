@@ -39,8 +39,7 @@
   &__date {
     display: block;
     color: $gray-600;
-    font-size: $font-size-small;
-    font-family: $font-family-sans-serif;
+    font-size: $font-size-base;
 
     &::after {
       content: '';
@@ -72,5 +71,9 @@
     &:focus {
       background: $blue-100;
     }
+  }
+
+  &__pagination {
+    margin-top: 3rem;
   }
 }

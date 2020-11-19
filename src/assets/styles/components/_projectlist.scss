@@ -1,0 +1,24 @@
+.projectlist {
+
+  &__item {
+    margin-bottom: 3rem;
+  }
+
+  #{&}__title {
+    margin: 0;
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__date {
+    margin-bottom: .5rem;
+    color: $gray-600;
+    font-size: $font-size-base;
+  }
+
+  #{&}__excerpt {
+    margin-bottom: 0.5rem;
+  }
+}

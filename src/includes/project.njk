@@ -8,12 +8,10 @@ layout: default
   aria-labelledby="{{ title | slug }}-title">
 
   <header class="project__header">
-    <div class="project__title-wrapper">
-      <h1 id="{{ title | slug }}-title" class="project__title">{{ title }}</h1>
-      {% if tags %}<span class="project__tags">{% for tag in tags %}<a href="/projects/{{ tag }}" class="project__tag">{{ tag }}</a>{% endfor%}</span>
-      {% endif %}
-    </div>
-    <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLLL yyyy') }}</time>
+    <h1 id="{{ title | slug }}-title" class="project__title">{{ title }}</h1>
+    {# {% if tags %}<span class="project__tags">{% for tag in tags %}<a href="/projects/{{ tag }}" class="project__tag">{{ tag }}</a>{% endfor%}</span>
+    {% endif %} #}
+    <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLL yyyy') }}</time>
     {% if image %}<div class="project__image">{% image image, title, null, null, false %}</div>{% endif %}
   </header>
 

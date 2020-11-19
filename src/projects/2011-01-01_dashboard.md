@@ -1,7 +1,7 @@
 ---
 title: Dashboarding app
 image: dashboard-banner.png
-description: A dashboarding service for businesses to work collaboratively.
+description: A dashboarding service for businesses to enhance collaborative work.
 date: 2011-01-01
 tags: work
 ---

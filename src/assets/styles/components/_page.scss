@@ -1,13 +1,26 @@
 .page {
-
   @include mq-up(md) {
     font-size: $font-size-medium;
     line-height: 1.6;
+
+    p,
+    ul,
+    ol,
+    dl {
+      margin-bottom: 1.5rem;
+    }
   }
 
   h1 {
     margin-top: 3rem;
     margin-bottom: 2rem;
+    font-size: $font-size-extra-large;
+
+    @include mq-up(md) {
+      margin-top: 5rem;
+      font-size: $font-size-extra-extra-large;
+      margin-bottom: 3rem;
+    }
   }
 
   h2 {
@@ -21,7 +34,37 @@
     color: $gray-700;
   }
 
-  p {
-    margin-bottom: 1.5rem;
+  p a,
+  li a,
+  ul a {
+    color: $gray-800;
+    background: $gray-200;
+    text-decoration: none;
+    border-bottom: 1px solid $gray-400;
+    transition: background-color 0.15s ease-in, color 0.1s ease-in, border 0.15s ease-in;
+
+    &:hover {
+      color: $body-color;
+      background: $blue-100;
+      border-bottom-color: $gray-500;
+      border-width: 2px;
+    }
+
+    &:active {
+      color: $white;
+      background: $blue;
+      border-bottom-color: $blue;
+    }
+
+    &[rel~='noopener']::after {
+      content: '';
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0px 4px 9px 4px;
+      background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M7 17l9.2-9.2M17 17V7H7'/></svg>");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
   }
 }

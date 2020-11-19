@@ -1,0 +1,22 @@
+<section class="projectlist">
+  {% for project in projects | reverse %}
+  <article class="projectlist__item">
+    <h2 class="projectlist__title">
+      <a class="projectlist__link" href="{{ project.url }}">{{ project.data.title }}</a>
+    </h2>
+
+    <div class="projectlist__date">
+      <time datetime="{{ project.date | formatISO }}">
+        {{ project.date | format('LLL yyyy') }}
+      </time>
+    </div>
+
+    {% if project.data.description %}
+    <p class="projectlist__excerpt">
+      {{ project.data.description }}
+    </p>
+    {% endif %}
+    <p><a href="{{ project.url }}">Read →</a></p>
+  </article>
+  {% endfor %}
+</section>
