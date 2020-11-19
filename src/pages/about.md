@@ -4,7 +4,7 @@ permalink: /about/
 title: About Me
 eleventyNavigation:
   key: About
-  order: 1
+  order: 3
 ---
 
 <div class="container page">

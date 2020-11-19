@@ -3,9 +3,10 @@
   // Only add background gray to project images
   .project__content picture {
     display: block;
-    @include extend;
     background-color: $gray-200;
     padding: 8rem 4rem;
+
+    @include extend;
   }
 
   figure,
