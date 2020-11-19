@@ -1,0 +1,54 @@
+.home {
+  p {
+    font-size: $font-size-large;
+    line-height: 1.6;
+  }
+}
+
+.select-hide {
+  color: $body-bg;
+  animation: flicker 10s linear infinite;
+}
+
+.select-hide--1 {
+  animation-delay: -3.5s;
+}
+
+.select-hide--2 {
+  animation-delay: -2s;
+}
+
+.select-hide--3 {
+  animation-delay: 2.5s;
+}
+
+.select-hide--4 {
+  animation-delay: 5s;
+}
+
+@keyframes flicker {
+  93% {
+    color: $body-bg;
+  }
+  93.5% {
+    color: $gray-600;
+  }
+  93.75% {
+    color: $body-bg;
+  }
+  94% {
+    color: $body-bg;
+  }
+  94.5% {
+    color: $gray-600;
+  }
+  94.75% {
+    color: $body-bg;
+  }
+  98% {
+    color: $body-bg;
+  }
+  98.5% {
+    color: $gray-600;
+  }
+}

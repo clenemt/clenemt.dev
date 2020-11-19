@@ -9,7 +9,7 @@ eleventyNavigation:
 
 <div class="container page">
 
-# I'm a frontend architect.
+# [Hello there 👋]{.page__title-pre}I'm a frontend architect.{.page__title}
 
 For the past **{{ "2011-01-01" | formatDistanceToNowStrict }}** I've worked as a frontend developer with a **UX/UI** driven background and a user centered approach. {.lead}
 

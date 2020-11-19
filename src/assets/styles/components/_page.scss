@@ -34,6 +34,20 @@
     color: $gray-700;
   }
 
+  &__title {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title-pre {
+    width: 100%;
+    color: $gray-500;
+    margin-bottom: .5rem;
+    font-size: $font-size-medium;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
   p a,
   li a,
   ul a {

@@ -7,7 +7,11 @@ eleventyNavigation:
 ---
 
 <div class="container page">
-  <h1>Yearly contributions.</h1>
+  <h1 class="page__title">
+    <span class="page__title-pre">A sample of my</span>
+    <span>Yearly contributions.</span>
+  </h1>
+
   {% set projects = collections.projects %}
   {% include "projectlist.njk" %}
 </div>

@@ -6,10 +6,10 @@ title: Clement Moron
 
 <div class="container home">
 
-Hi! I’m **Clement Moron**, a [frontend architect](about), [writer](notes) and [not so]{.select-hide} talented climber. I work as a nexus between design and frontend, [making websites](projects/work) scalable and lightning fast.
+Hi! I’m **Clement Moron**, a [frontend architect](about/), [writer](notes/) and [definitely not]{.select-hide .select-hide--2} professional climber.
 
-I like to experiment and build [cool things](projects/open-source) in my spare time.
+I like [building](projects/work/) stuffs and [experimenting](projects/open-source/) with [strange things]{.select-hide .select-hide--1}.
 
-I'm [crazy]{.select-hide} passionate about my craft, always looking out for original ideas and _new things_. I'm drawn to anything that involves hiking, climbing or [traveling](https://vimeo.com/120206922).
+I'm [full on]{.select-hide .select-hide--3} passionate about my craft, always looking out for _original ideas_. I'm drawn to anything that involves hiking, climbing or travelling.
 
 </div>
