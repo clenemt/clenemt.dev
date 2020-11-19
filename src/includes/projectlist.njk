@@ -5,10 +5,12 @@
       <a class="projectlist__link" href="{{ project.url }}">{{ project.data.title }}</a>
     </h2>
 
-    <div class="projectlist__date">
-      <time datetime="{{ project.date | formatISO }}">
+    <div class="projectlist__meta">
+      <time class="projectlist__date" datetime="{{ project.date | formatISO }}">
         {{ project.date | format('LLL yyyy') }}
       </time>
+      {% if project.data.tags %}<span class="tags">{% for tag in project.data.tags %}<a href="/projects/{{ tag }}" class="tag">{{ tag }}</a>{% endfor %}</span>
+      {% endif %}
     </div>
 
     {% if project.data.description %}

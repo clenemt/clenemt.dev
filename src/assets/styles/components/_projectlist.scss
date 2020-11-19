@@ -6,14 +6,24 @@
 
   #{&}__title {
     margin: 0;
+    margin-bottom: 0.25rem;
   }
 
   &__link {
     text-decoration: none;
   }
 
-  &__date {
+  &__meta {
     margin-bottom: .5rem;
+    display: flex;
+    align-items: center;
+
+    @include mq-up(md) {
+      margin-bottom: .75rem;
+    }
+  }
+
+  &__date {
     color: $gray-600;
     font-size: $font-size-base;
   }

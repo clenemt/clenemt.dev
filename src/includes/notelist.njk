@@ -1,15 +1,14 @@
-<section>
+<section class="notelist">
+
   {% for note in collections.notes | reverse %}
-  <article>
-    <div>
-      {% if note.data.title %}<h1>{{ note.data.title | markdown | safe }}</h1>{% endif %}
-      <time datetime="{{ note.date | formatISO }}">
-        {{ note.date | format('dd LLL yyyy') }}
-      </time>
-      <div>
-        {{ note.templateContent | safe }}
-      </div>
+  <article class="notelist__item">
+    <time class="notelist__date" datetime="{{ note.date | formatISO }}">
+      {{ note.date | format('dd LLL yyyy') }}
+    </time>
+    <div class="notelist__content">
+      {{ note.templateContent | safe }}
     </div>
   </article>
   {% endfor %}
+
 </section>
