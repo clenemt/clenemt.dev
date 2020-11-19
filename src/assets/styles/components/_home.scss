@@ -1,6 +1,11 @@
 .home {
   p {
-    font-size: $font-size-large;
+    font-size: $font-size-medium;
+    margin-bottom: 1.5rem;
+
+    @include mq-up(md) {
+      font-size: $font-size-large;
+    }
   }
 }
 

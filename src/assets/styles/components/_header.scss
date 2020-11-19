@@ -24,7 +24,7 @@
   }
 
   &__item + &__item {
-    margin-left: 1.5rem;
+    margin-left: 1rem;
 
     @include mq-up(md) {
       margin-left: 4rem;
