@@ -51,6 +51,6 @@ JavaScript new trends are something I follow closely. I'm able to keep up thanks
 
 ## Curriculum Vitae
 
-Want a more formal _about me_ or something to print and read at night, check me out on [Linkedin](https://uy.linkedin.com/in/clementmoron).
+Want a more formal _about me_ or something to print and read at night, check me out on [Linkedin](https://www.linkedin.com/in/clementmoron).
 
 </div>
