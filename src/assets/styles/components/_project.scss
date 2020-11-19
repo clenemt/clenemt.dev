@@ -1,0 +1,58 @@
+.project {
+
+  // Only add background gray to project images
+  .project__content picture {
+    display: block;
+    @include extend;
+    background-color: $gray-200;
+    padding: 8rem 4rem;
+  }
+
+  figure,
+  .project__content picture {
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  figcaption {
+    margin-top: -1rem;
+    text-align: center;
+    font-size: $font-size-base;
+    font-style: italic;
+    color: $gray-600;
+  }
+
+  .img-fluid {
+    margin: 0 auto;
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  // To override specificity of `.page h1`
+  & &__title {
+    margin-bottom: 0;
+  }
+
+  &__date {
+    display: block;
+    color: $gray-600;
+    font-size: $font-size-base;
+
+    &::after {
+      content: '';
+      display: block;
+      margin: 1rem 0 2rem;
+      width: 3rem;
+      height: 5px;
+      background: $blue-300;
+      opacity: 0.25;
+    }
+  }
+
+  &__pagination {
+    margin-top: 3rem;
+  }
+}

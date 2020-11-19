@@ -1,0 +1,369 @@
+// Change from `box-sizing: content-box` so that `width` is not affected by `padding` or `border`
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: $font-size-root;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
+}
+
+//
+// Body
+//
+
+body {
+  margin: 0;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  font-weight: $font-weight-base;
+  line-height: $line-height-base;
+
+  color: $body-color;
+  background-color: $body-bg;
+
+  // Prevent adjustments of font size after orientation changes in iOS
+  -webkit-text-size-adjust: 100%;
+  // Change the default tap highlight to be completely transparent in iOS
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+// Render the `main` element consistently in IE
+main {
+  display: block;
+}
+
+hr {
+  height: 5px;
+  margin: 1rem 0 1.5rem;
+  color: inherit;
+  background-color: $blue-300;
+  border: 0;
+  opacity: 0.25;
+  // Show the overflow in Edge and IE
+  overflow: visible;
+}
+
+//
+// Links
+//
+
+a {
+  color: $link-color;
+  // Remove the gray background on active links in IE 10
+  background-color: transparent;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+}
+
+// Undo previous styles for placeholder links/named anchors (without href).
+a:not([href]):not([class]) {
+  &,
+  &:hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+//
+// Lists
+//
+
+ol,
+ul {
+  padding-left: 2rem;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: 0.5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+small {
+  font-size: $small-font-size;
+}
+
+mark {
+  padding: 0.2em;
+  background-color: #fcf8e3;
+}
+
+//
+// Code
+//
+
+pre,
+code,
+kbd,
+samp {
+  // Correct the odd `em` font sizing in all browsers
+  font-size: $small-font-size;
+  font-family: $font-family-monospace;
+}
+
+pre {
+  display: block;
+  overflow: auto;
+  margin-top: 0;
+  margin-bottom: 1rem;
+
+  // Account for some code outputs that place code tags in pre tags
+  code {
+    font-size: inherit;
+    color: inherit;
+    word-break: normal;
+  }
+}
+
+code {
+  color: $pink;
+  word-wrap: break-word;
+
+  // Streamline the style when inside anchors to avoid broken underline and more
+  a > & {
+    color: inherit;
+  }
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  color: $white;
+  background-color: $gray-900;
+  border-radius: $border-radius-sm;
+
+  kbd {
+    padding: 0;
+    font-size: 1em;
+    font-weight: 700;
+  }
+}
+
+//
+// Images
+//
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+img {
+  // Remove the border on images inside links in IE 10
+  border-style: none;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
+
+//
+// Tables
+//
+
+table {
+  // Prevent double borders
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
+th {
+  // Matches default `<td>` alignment by inheriting `text-align`
+  text-align: inherit;
+  // Fix alignment for Safari
+  text-align: -webkit-match-parent;
+}
+
+thead,
+tbody,
+tfoot,
+tr,
+td,
+th {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 0;
+}
+
+//
+// Forms
+//
+
+button {
+  // Remove the default `border-radius` that macOS Chrome adds
+  border-radius: 0;
+}
+
+// Work around a Firefox bug where the transparent `button` background
+// results in a loss of the default `button` focus styles
+button:focus {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+button,
+select {
+  // Remove the inheritance of text transform in Firefox
+  text-transform: none;
+}
+
+[role='button'] {
+  // Set the cursor for non-`<button>` buttons
+  cursor: pointer;
+}
+
+button,
+[type='button'],
+[type='reset'],
+[type='submit'] {
+  // Correct the inability to style clickable types in iOS and Safari
+  -webkit-appearance: button;
+  &:not(:disabled) {
+    // Add "hand" cursor to non-disabled button elements.
+    cursor: pointer;
+  }
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  // Remove the margin in Firefox and Safari
+  margin: 0;
+  // Change the font styles in all browsers
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+}
+
+// Remove inner border and padding from Firefox
+::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+label {
+  // Allow labels to use `margin` for spacing
+  display: inline-block;
+}
+
+select {
+  word-wrap: normal;
+}
+
+textarea {
+  // Only resize vertically to not break horizontal containers
+  resize: vertical;
+  // Remove the default vertical scrollbar in IE 10+
+  overflow: auto;
+}
+
+[type='checkbox'],
+[type='radio'] {
+  // Add the correct box sizing in IE 10
+  box-sizing: border-box;
+  // Remove the padding in IE 10
+  padding: 0;
+}
+
+// Correct the cursor style of increment and decrement buttons in Chrome
+[type='number']::-webkit-inner-spin-button,
+[type='number']::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type='search'] {
+  // Correct the outline style in Safari.
+  outline-offset: -2px;
+  // Remove the inner padding in Chrome and Safari on macOS
+  -webkit-appearance: textfield;
+}
+
+::-webkit-color-swatch-wrapper {
+  // Remove padding around color pickers in webkit browsers
+  padding: 0;
+}
+
+// Fix height of inputs with a type of datetime-local, date, month, week, or time
+::-webkit-datetime-edit-fields-wrapper,
+::-webkit-datetime-edit-text,
+::-webkit-datetime-edit-minute,
+::-webkit-datetime-edit-hour-field,
+::-webkit-datetime-edit-day-field,
+::-webkit-datetime-edit-month-field,
+::-webkit-datetime-edit-year-field {
+  padding: 0;
+}
+
+::-webkit-inner-spin-button {
+  height: auto;
+}
+
+::file-selector-button {
+  // Inherit font family and line height for file input buttons
+  font: inherit;
+}
+
+::-webkit-file-upload-button {
+  // Change font properties to `inherit` in Safari
+  font: inherit;
+  // Correct the inability to style clickable types in iOS and Safari
+  -webkit-appearance: button;
+}
+
+// Future-proof rule: in browsers that support :focus-visible, suppress the focus outline
+// on elements that programmatically receive focus but wouldn't normally show a visible
+// focus outline. In general, this would mean that the outline is only applied if the
+// interaction that led to the element receiving programmatic focus was a keyboard interaction,
+// or the browser has somehow determined that the user is primarily a keyboard user and/or
+// wants focus outlines to always be presented.
+// See https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible
+// and https://developer.paciellogroup.com/blog/2018/03/focus-visible-and-backwards-compatibility/
+[tabindex='-1']:focus:not(:focus-visible) {
+  outline: 0 !important;
+}
+
+iframe {
+  // Remove border from iframe
+  border: 0;
+}
+
+progress {
+  // Add the correct vertical alignment in Chrome, Firefox, and Opera
+  vertical-align: baseline;
+}
+
+[hidden] {
+  // Always hide an element with the `hidden` HTML attribute
+  display: none !important;
+}

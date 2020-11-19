@@ -1,0 +1,65 @@
+@mixin mq-up($name) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin mq-down($name) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (max-width: ($min - 1px)) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin extend {
+  margin-right: -3rem;
+  margin-left: -3rem;
+}
+
+// @mixin hyphenate() {
+//   word-wrap: break-word;
+//   overflow-wrap: break-word;
+//   hyphens: auto;
+// }
+
+// @mixin truncate() {
+//   white-space: nowrap;
+//   overflow: hidden;
+//   text-overflow: ellipsis;
+// }
+
+// @mixin coverall() {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }
+
+// @mixin scrollable() {
+//   overflow-y: auto;
+//   -webkit-overflow-scrolling: touch;
+// }
+
+@mixin container-narrow() {
+  width: 100%;
+  max-width: $container-narrow-max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// @mixin button-reset() {
+//   border: 0;
+//   padding: 0;
+//   background-color: transparent;
+//   -webkit-appearance: none;
+// }

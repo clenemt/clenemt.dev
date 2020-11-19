@@ -1,0 +1,53 @@
+.footer {
+  font-family: $font-family-sans-serif;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: $border-width solid $gray-200;
+  }
+
+  &__item {
+    flex: 1 1 50%;
+
+    &--copy {
+      flex-basis: 100%;
+      margin-bottom: 0.25rem;
+    }
+
+    &--social {
+      @include mq-up(md) {
+        justify-content: end;
+      }
+    }
+
+    &--source,
+    &--social {
+      // Visually align with copy due to padding on links
+      margin-left: -0.4rem;
+    }
+
+    &--source .footer__link {
+      color: $gray-700;
+
+      &:hover,
+      &:focus {
+        background-color: $gray-300;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    padding: 0.25rem 0.5rem;
+    transition: background-color 0.1s ease-in;
+
+    &:hover,
+    &:focus {
+      background-color: $blue-100;
+    }
+  }
+}

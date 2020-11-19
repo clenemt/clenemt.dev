@@ -1,0 +1,38 @@
+.notelist {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 2.5rem;
+    width: 1px;
+    background-color: $blue-200;
+  }
+
+  &__item {
+    position: relative;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    background-color: $white;
+    border: 1px solid $blue-200;
+    border-radius: $border-radius;
+
+    @include mq-up(lg) {
+      @include extend;
+    }
+  }
+
+  &__content *:last-child {
+    margin-bottom: .5rem;
+  }
+
+  &__date {
+    display: block;
+    color: $blue-600;
+    font-size: $font-size-base;
+    margin-bottom: 0.75rem;
+  }
+}

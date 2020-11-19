@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{% if title %}{{ title }} · {{ site.title }}{% else %}{{ site.title or site.name}}{% endif %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ description or site.description }}">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+
+    {# Open graph related #}
+    <meta property="og:title" content="{{ title or site.title or site.name }}" />
+    <meta property="og:type" content="{{ type or site.type }}" />
+    <meta property="og:url" content="{{ url or site.url }}" />
+    <meta property="og:image" content="{{ image or site.image }}" />
+    <meta property="og:site_name" content="{{ name or site.name }}" />
+    <meta property="og:description" content="{{ description or site.description }}" />
+
+    {# Fonts #}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% webpack 'main.css' %}">
+  </head>
+  <body>
+    <a href="#main" class="visually-hidden-focusable">skip to main content</a>
+
+    <div class="site" role="document">
+      {% include "header.njk" %}
+      <main id="main" class="site__content">
+        {{ content | safe }}
+      </main>
+      {% include "footer.njk" %}
+    </div>
+
+    <script async defer src="{% webpack 'main.js' %}"></script>
+  </body>
+</html>

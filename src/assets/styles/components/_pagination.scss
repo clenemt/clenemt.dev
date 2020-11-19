@@ -1,0 +1,33 @@
+.pagination {
+  display: flex;
+
+  &__item {
+    flex: 1 1 50%;
+  }
+
+  &__item--next {
+    text-align: right;
+  }
+
+  &__item--prev {
+    text-align: left;
+  }
+
+  &__link {
+    font-family: $font-family-sans-serif;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.15s ease-in;
+
+    &:hover {
+      background-color: $blue-100;
+      text-decoration: none;
+    }
+
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $blue;
+    }
+  }
+}

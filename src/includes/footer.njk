@@ -1,0 +1,19 @@
+<footer class="site__footer footer" role="contentinfo">
+  <div class="container footer__items">
+    <div class="footer__item footer__item--copy">
+      <p class="mb-0">&copy; 2011&ndash;{{ build.timestamp | format('yyyy') }}<strong class="ml-2">{{ site.title }}</strong></p>
+    </div>
+
+    <ul class="footer__item footer__item--source list list--inline">
+      <li class="list__item"><a class="footer__link" target="_blank" href="https://github.com/{{ site.github_user }}/{{ site.name }}">Source</a></li>
+      <li class="list__item"><a class="footer__link" href="/colophon">Colophon</a></li>
+    </ul>
+
+    <ul class="footer__item footer__item--social list list--inline">
+      <li class="list__item"><a class="footer__link" href="mailto:{{ site.email }}">Contact</a></li>
+      <li class="list__item"><a class="footer__link" target="_blank" href="https://github.com/{{ site.github_user }}">Github</a></li>
+      <li class="list__item"><a class="footer__link" target="_blank" href="https://twitter.com/{{ site.twitter_user }}">Twitter</a></li>
+    </ul>
+    </div>
+  </div>
+</footer>

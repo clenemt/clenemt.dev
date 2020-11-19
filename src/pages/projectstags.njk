@@ -1,0 +1,22 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - projects
+    - notes
+permalink: /projects/{{ tag }}/
+layout: default
+renderData:
+  title: "Projects tagged “{{ tag }}”"
+  metaDescription: "All projects tagged with “{{ tag }}”"
+---
+
+<div class="container page">
+  <h1>Projects tagged <span class="tag ml-2">{{ tag }}</span></h1>
+
+  {% set projects = collections[tag] %}
+  {% include "projectlist.njk" %}
+</div>

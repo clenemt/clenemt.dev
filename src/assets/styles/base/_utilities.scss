@@ -1,0 +1,63 @@
+//
+// Accessibility
+//
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.extend {
+  @include extend;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.fs-small {
+  font-size: $small-font-size;
+}
+
+.fw-normal {
+  font-weight: normal;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.mb-0 {
+  margin-bottom: 0 !important;
+}
+
+.mr-1 {
+  margin-right: 0.25rem;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}

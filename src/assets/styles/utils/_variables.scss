@@ -1,0 +1,115 @@
+//
+// Colors
+//
+
+$white: #fff;
+$gray-100: #fafaf8;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$gray: $gray-500;
+$blue: #4072AF;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #198754;
+$teal: #20c997;
+$cyan: #0dcaf0;
+
+$blue-100: tint-color($blue, 80%);
+$blue-200: tint-color($blue, 60%);
+$blue-300: tint-color($blue, 40%);
+$blue-400: tint-color($blue, 20%);
+$blue-500: $blue;
+$blue-600: shade-color($blue, 20%);
+$blue-700: shade-color($blue, 40%);
+$blue-800: shade-color($blue, 60%);
+$blue-900: shade-color($blue, 80%);
+
+//
+// Grid breakpoints
+//
+
+$breakpoints: (
+  md: 670px,
+  lg: 940px,
+  xl: 1260px
+);
+
+$container-max-width: 43rem;
+$container-narrow-max-width: 43rem;
+
+//
+// Z-Index Stack
+//
+
+$z-layers: (
+  'modal': 999,
+  'nav': 100,
+  'content-overlay': 30
+);
+
+//
+// Body
+//
+
+$body-bg: $gray-100;
+$body-color: $gray-900;
+
+//
+// Typography
+//
+
+$font-family-sans-serif: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto,
+  'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-serif: 'Lora', Georgia, Times, serif;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+  'Liberation Mono', 'Courier New', monospace;
+$font-family-base: $font-family-serif;
+
+$font-size-root: 100%;
+
+$font-size-base: 1rem;
+$font-size-extra-small: 0.75rem;
+$font-size-small: 0.875rem;
+$font-size-medium: 1.25rem;
+$font-size-large: 1.5rem;
+$font-size-extra-large: 2.5rem;
+$font-size-extra-extra-large: 3rem;
+
+$line-height-base: 1.5;
+$line-height-medium: 1.6;
+
+$font-weight-base: 400;
+
+//
+// Links
+//
+
+$link-color: $blue;
+$link-decoration: underline;
+$link-hover-color: scale-color($link-color, 20%);
+
+//
+// Misc Shared
+//
+
+$border-width: 1px;
+
+$border-radius: 0.25rem;
+$border-radius-sm: 0.2rem;
+$border-radius-lg: 0.3rem;
+$border-radius-pill: 50rem;
+
+$small-font-size: 0.875em;

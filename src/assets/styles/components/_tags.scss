@@ -1,0 +1,26 @@
+.tags {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  line-height: 1;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.25rem 0.25rem;
+  border: 1px solid $gray-500;
+  color: $gray-700;
+  line-height: 1;
+  font-size: 0.75rem;
+  font-variant: small-caps;
+  font-weight: 400;
+  font-family: $font-family-sans-serif;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+a.tag:hover,
+a.tag:focus {
+  background: $white;
+  color: $black;
+  border-color: $gray-700;
+}
