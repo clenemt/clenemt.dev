@@ -33,7 +33,7 @@ Even though I am an engineer, my mindset is that of a designer. I like to come u
 
 This translates in frontend development to _responsible_ responsive design. It’s not just about adapting to screen sizes, but also the browser, network conditions, usage context, accessibility and much more.
 
-## Technical skillset
+## Technical skill set
 
 I’m extremely fluent with both **CSS and Javascript**. I’m familiar with most of the tools of the ever growing web development stack. Be it runners, bundlers, containers, CI servers, cloud providers, content management systems or CDNs.
 
