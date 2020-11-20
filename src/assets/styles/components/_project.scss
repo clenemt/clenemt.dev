@@ -1,7 +1,7 @@
 .project {
 
   // Only add background gray to project images
-  .project__content picture {
+  .project__content picture:not(.naked) {
     display: block;
     background-color: $gray-200;
     padding: 8rem 4rem;

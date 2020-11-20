@@ -51,7 +51,8 @@
 
   p a,
   li a,
-  ul a {
+  ul a,
+  figcaption a {
     color: $gray-800;
     background: $gray-200;
     text-decoration: none;

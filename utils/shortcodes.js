@@ -78,15 +78,14 @@ module.exports = {
 
     const fallback = stats[extension].reverse()[0];
     const picture = outdent({ newline: '' })`
-    <picture>
+    <picture class="${!title && className || ''}">
       ${Object.values(stats)
         .map(
           (image) =>
             `<source type="image/${image[0].format}" srcset="${image
               .map((entry) => `${entry.url} ${entry.width}w`)
               .join(', ')}" sizes="${sizes}">`
-        )
-        .join('\n')}
+        ).join('')}
       <img
         class="img-fluid ${className || ''}"
         loading="${lazy ? 'lazy' : 'eager'}"
@@ -96,7 +95,7 @@ module.exports = {
     </picture>`;
     return title
       ? outdent({ newline: '' })`
-      <figure>
+      <figure class="${className || ''}">
         ${picture}
         <figcaption>${markdown.renderInline(title)}</figcaption>
       </figure>`
