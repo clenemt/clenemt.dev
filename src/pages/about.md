@@ -9,9 +9,9 @@ eleventyNavigation:
 
 <div class="container page">
 
-# [Hello there 👋]{.page__title-pre}I'm a frontend architect.{.page__title}
+# [Hello there 👋]{.page__title-pre}I am a frontend architect.{.page__title}
 
-For the past **{{ "2011-01-01" | formatDistanceToNowStrict }}** I've worked as a frontend developer with a **UX/UI** driven background and a user centered approach. {.lead}
+For the past **{{ "2011-01-01" | formatDistanceToNowStrict }}** I have worked as a frontend developer with a **UX/UI** driven background and a user centered approach. {.lead}
 
 <div class="clearfix">
 
@@ -45,7 +45,7 @@ Well documented APIs are to backend what styleguides are to frontend.
 
 **Web performance** is one of my core belief. I find performance budgets to be _key_ for a good frontend architecture. I understand the waterfall, how browser requests work and how to optimize the above-the-fold content, with caching, conditional loading and assets optimization
 
-JavaScript new trends are something I follow closely. I'm able to keep up thanks to a myriad of web feeds that I'll gladly share. I like diving deep into established framework and learn more about the _underlining_ concepts.
+JavaScript new trends are something I follow closely. I am able to keep up thanks to a myriad of web feeds that I'll gladly share. I like diving deep into established framework and learn more about the _underlining_ concepts.
 
 ---
 

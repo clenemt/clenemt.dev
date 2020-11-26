@@ -23,7 +23,7 @@
     @include extend;
   }
 
-  &__content *:last-child {
+  &__content > *:last-child {
     margin-bottom: .5rem;
   }
 

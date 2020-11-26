@@ -1,14 +1,14 @@
 ---
 title: A starter template for eleventy
 image: eleventy-webpack-banner.png
-description: Webpack seems to be my go-to bundler, thanks to all the React I'm doing. It felt natural to use it with Eleventy.
+description: Webpack seems to be my go-to bundler, thanks to all the React I am doing. It felt natural to use it with Eleventy.
 date: 2020-10-20
 tags: open-source
 ---
 
 Webpack and Eleventy paired nicely together in a barebone template. {.lead}
 
-Webpack seems to be my go-to bundler, thanks to all the React I'm doing these days. And since I'm going to do a lot more Eleventy in the coming weeks, why not put something out there that my help others.
+Webpack seems to be my go-to bundler, thanks to all the React I am doing these days. And since I am going to do a lot more Eleventy in the coming weeks, why not put something out there that my help others.
 
 ## Features
 
