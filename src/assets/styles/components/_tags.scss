@@ -7,7 +7,7 @@
 .tag {
   display: inline-block;
   padding: 0.25rem 0.25rem;
-  border: 1px solid $gray-500;
+  border: $border-width solid $gray-500;
   color: $gray-700;
   line-height: 1;
   font-size: 0.75rem;

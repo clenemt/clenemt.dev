@@ -156,16 +156,17 @@ code {
 }
 
 kbd {
-  padding: 0.2rem 0.4rem;
-  color: $white;
-  background-color: $gray-900;
-  border-radius: $border-radius-sm;
-
-  kbd {
-    padding: 0;
-    font-size: 1em;
-    font-weight: 700;
-  }
+  display: inline-block;
+  margin: 0 0.1em;
+  padding: 0.1em 0.6em;
+  font-size: $font-size-small;
+  color: $gray-800;
+  text-shadow: 0 1px 0 $white;
+  background-color: $gray-300;
+  border: $border-width solid $gray-500;
+  border-radius: $border-radius-small;
+  box-shadow: 0 1px 1px rgba(12, 13, 14, 0.15), inset 0 1px 0 0 $white;
+  overflow-wrap: break-word;
 }
 
 //

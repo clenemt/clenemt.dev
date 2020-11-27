@@ -9,6 +9,8 @@ const markdown = require('./utils/markdown');
 const shortcodes = require('./utils/shortcodes');
 const transforms = require('./utils/transforms');
 
+const isProduction = process.env.NODE_ENV === 'production';
+
 module.exports = (config) => {
   const manifestPath = path.resolve(__dirname, '_site/assets/manifest.json');
 
@@ -42,9 +44,12 @@ module.exports = (config) => {
   // Collections
   config.addCollection('projects', (collection) =>
     collection.getFilteredByGlob('src/projects/*.md')
+    .filter((item) => !(item.data.draft && isProduction))
   );
   config.addCollection('notes', (collection) =>
-    collection.getFilteredByGlob('src/notes/*.md')
+    collection
+      .getFilteredByGlob('src/notes/*.md')
+      .filter((item) => !(item.data.draft && isProduction))
   );
 
   // Pass-through files

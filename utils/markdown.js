@@ -6,8 +6,8 @@ const markdownItBracketedSpans = require('markdown-it-bracketed-spans');
 const markdown = markdownIt({
   html: true,
   breaks: true,
-  typographer: true,
-  linkify: true
+  linkify: true,
+  typographer: true
 })
   .use(markdownItBracketedSpans)
   .use(markdownItAttributes)
