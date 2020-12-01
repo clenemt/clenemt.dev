@@ -12,7 +12,7 @@ layout: default
     {# {% if tags %}<span class="project__tags">{% for tag in tags %}<a href="/projects/{{ tag }}" class="project__tag">{{ tag }}</a>{% endfor%}</span>
     {% endif %} #}
     <time class="project__date" datetime="{{ page.date | formatISO }}">{{ page.date | format('LLL yyyy') }}</time>
-    {% if image %}<div class="project__image">{% image image, title, null, null, false %}</div>{% endif %}
+    {% if image %}<div class="project__image">{% image image, title, null, null, false, "90vw, (min-width: 782px) 43rem" %}</div>{% endif %}
   </header>
 
   <div class="project__content">

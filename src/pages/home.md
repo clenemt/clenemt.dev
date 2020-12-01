@@ -6,7 +6,7 @@ title: Clement Moron
 
 <div class="container page home">
 
-# [Hello I’m Clement]{.page__title-pre .fw-bold} a frontend architect.{.page__title}
+# [Hello I’m Clement]{.page__title-pre .t-bold} a frontend architect.{.page__title}
 
 I am also a [writer](notes/) and [definitely not]{.select-hide .select-hide--2} professional climber.
 

@@ -5,7 +5,7 @@ const Image = require('@11ty/eleventy-img');
 const markdown = require('./markdown');
 
 const iconDefaultSize = 24;
-const defaultSizes = '90vw, (min-width: 1280px) 1152px';
+const defaultSizes = '90vw, (min-width: 782px) 41rem';
 const defaultImagesSizes = [1920, 1280, 640, 320];
 
 const isFullUrl = (url) => {
@@ -50,14 +50,21 @@ module.exports = {
 
   // Allow embedding responsive images
   // {% image "image.jpeg", "Image alt", "Image title", "my-class" %}
-  image: async (
-    src,
-    alt,
-    title,
-    className,
-    lazy = true,
-    sizes = defaultSizes
-  ) => {
+  // {% image [100,100], "image.jpeg", "Image alt", "Image title", "my-class" %}
+  image: async (...args) => {
+    let fallbackWidth, fallbackHeight;
+
+    if (Array.isArray(args[0])) {
+      [fallbackWidth, fallbackHeight] = args.shift();
+    }
+
+    const src = args[0];
+    const alt = args[1];
+    const title = args[2];
+    const className = args[3];
+    const lazy = args[4] ?? true;
+    const sizes = args[5] ?? defaultSizes;
+
     const extension = path.extname(src).slice(1).toLowerCase();
     const fullSrc = isFullUrl(src) ? src : `./src/assets/images/${src}`;
 
@@ -78,20 +85,21 @@ module.exports = {
 
     const fallback = stats[extension].reverse()[0];
     const picture = outdent({ newline: '' })`
-    <picture class="${!title && className || ''}">
+    <picture class="${(!title && className) || ''}">
       ${Object.values(stats)
         .map(
           (image) =>
             `<source type="image/${image[0].format}" srcset="${image
               .map((entry) => `${entry.url} ${entry.width}w`)
               .join(', ')}" sizes="${sizes}">`
-        ).join('')}
+        )
+        .join('')}
       <img
         class="img-fluid ${className || ''}"
         loading="${lazy ? 'lazy' : 'eager'}"
         src="${fallback.url}"
-        width="${fallback.width}"
-        height="${fallback.height}" alt="${alt}">
+        width="${fallbackWidth ?? fallback.width}"
+        height="${fallbackHeight ?? fallback.height}" alt="${alt}">
     </picture>`;
     return title
       ? outdent({ newline: '' })`

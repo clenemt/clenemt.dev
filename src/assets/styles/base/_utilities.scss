@@ -30,24 +30,37 @@
   clear: both;
 }
 
-.fs-small {
-  font-size: $font-size-small;
+.t-small {
+  font-size: $font-size-small !important;
 }
 
-.fs-large {
-  font-size: $font-size-large;
+.t-large {
+  font-size: $font-size-large !important;
 }
 
-.fw-normal {
-  font-weight: normal;
+.t-normal {
+  font-weight: normal !important;
 }
 
-.fw-bold {
-  font-weight: 700;
+.t-bold {
+  font-weight: 700 !important;
+}
+
+.t-center {
+  text-align: center !important;
+}
+
+.d-block {
+  display: block !important;
 }
 
 .d-flex {
   display: flex !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .mb-0 {
@@ -55,17 +68,17 @@
 }
 
 .mr-1 {
-  margin-right: 0.25rem;
+  margin-right: 0.25rem !important;
 }
 
 .mr-2 {
-  margin-right: 0.5rem;
+  margin-right: 0.5rem !important;
 }
 
 .ml-1 {
-  margin-left: 0.25rem;
+  margin-left: 0.25rem !important;
 }
 
 .ml-2 {
-  margin-left: 0.5rem;
+  margin-left: 0.5rem !important;
 }

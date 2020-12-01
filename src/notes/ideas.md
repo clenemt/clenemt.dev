@@ -1,9 +1,9 @@
 ---
+date: 2019-11-11
 draft: true
 ---
 
 Ideas:
-* Privatezilla
 * move outside of dropbox
 * windows terminal
 * nvm
