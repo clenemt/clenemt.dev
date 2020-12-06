@@ -1,0 +1,29 @@
+pre[class*='language-'] {
+  padding: 1.5rem 1rem;
+  border-bottom: 2px solid $gray-400;
+  background-color: $gray-200;
+  border-radius: $border-radius;
+}
+
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: $gray-600;
+}
+
+.token.constant,
+.token.deleted,
+.token.property,
+.token.symbol,
+.token.tag {
+  color: $green;
+}
+
+.token.attr-name,
+.token.important,
+.token.keyword,
+.token.regex,
+.token.selector {
+  color: $blue-500;
+}

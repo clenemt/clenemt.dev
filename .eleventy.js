@@ -3,6 +3,7 @@ const path = require('path');
 const yaml = require('js-yaml');
 const NavigationPlugin = require('@11ty/eleventy-navigation');
 const ErrorOverlayPlugin = require('eleventy-plugin-error-overlay');
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 const filters = require('./utils/filters');
 const markdown = require('./utils/markdown');
@@ -21,8 +22,9 @@ module.exports = (config) => {
   config.addDataExtension('yml', (contents) => yaml.safeLoad(contents));
 
   // Plugins
-  // Shows error name, message, and fancy stacktrace
+  config.addPlugin(syntaxHighlight);
   config.addPlugin(NavigationPlugin);
+  // Shows error name, message, and fancy stacktrace
   config.addPlugin(ErrorOverlayPlugin);
 
   // Filters
@@ -43,8 +45,9 @@ module.exports = (config) => {
 
   // Collections
   config.addCollection('projects', (collection) =>
-    collection.getFilteredByGlob('src/projects/*.md')
-    .filter((item) => !(item.data.draft && isProduction))
+    collection
+      .getFilteredByGlob('src/projects/*.md')
+      .filter((item) => !(item.data.draft && isProduction))
   );
   config.addCollection('notes', (collection) =>
     collection
