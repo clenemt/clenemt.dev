@@ -141,13 +141,11 @@ pre {
   code {
     font-size: inherit;
     color: inherit;
-    word-break: normal;
   }
 }
 
 code {
   color: $pink;
-  word-wrap: break-word;
 
   // Streamline the style when inside anchors to avoid broken underline and more
   a > & {
