@@ -27,7 +27,7 @@ Webpack seems to be my go-to bundler, thanks to all the React I am doing these d
 
 ## Bonus
 
-It currently ranks **#8** on [Speedlify](https://www.speedlify.dev/eleventy-starters/#site-78c4c4c7).
+It currently ranks **#6** on [Speedlify](https://www.speedlify.dev/eleventy-starters/#site-78c4c4c7).
 
 {% image "eleventy-webpack-speedlify.png", "A website showing a score board", "Let's make it to the top shall we" %}
 
