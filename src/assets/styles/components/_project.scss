@@ -4,9 +4,13 @@
   .project__content picture:not(.naked) {
     display: block;
     background-color: $gray-200;
-    padding: 8rem 4rem;
+    padding: 3.5rem 2rem 4rem;
 
     @include extend;
+
+    @include mq-up(md) {
+      padding: 8rem 4rem;
+    }
   }
 
   figure,
