@@ -62,6 +62,15 @@ strong {
   font-weight: bolder;
 }
 
+blockquote {
+  padding-left: 1rem;
+  margin-left: 1rem;
+  padding-right: 1rem;
+  border-left: 3px solid $gray-500;
+  color: $gray-700;
+  font-style: italic;
+}
+
 .lead {
   color: $blue-700;
   font-size: $font-size-medium;
