@@ -1,9 +1,9 @@
 {
   "license": "MIT",
-  "name": "clenemt.com",
+  "name": "clenemt.dev",
   "repository": {
     "type": "git",
-    "url": "https://github.com/clenemt/clenemt.com"
+    "url": "https://github.com/clenemt/clenemt.dev"
   },
   "scripts": {
     "clean": "rimraf _site",

@@ -1,11 +1,11 @@
 lang: en
-name: clenemt.com
+name: clenemt.dev
 title: Clement Moron
 email: clement.moron@gmail.com
 github_user: clenemt
 twitter_user: clenemt
 # see https://ogp.me/#types
 type: website
-url: https://clenemt.com
+url: https://clenemt.dev
 image: https://avatars3.githubusercontent.com/u/447956?s=400&v=4
 description: Clement Moron is a passionate and creative front-end developer based in Stockholm, Sweden.
