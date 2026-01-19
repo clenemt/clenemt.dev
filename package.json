@@ -33,7 +33,7 @@
     "core-js": "^3.8.1",
     "cross-env": "^7.0.3",
     "css-loader": "^5.0.1",
-    "css-minimizer-webpack-plugin": "^1.1.5",
+    "css-minimizer-webpack-plugin": "^7.0.4",
     "date-fns": "^2.16.1",
     "eleventy-plugin-error-overlay": "^0.1.2",
     "html-minifier": "^4.0.0",
