@@ -53,7 +53,7 @@
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "source-map-explorer": "^2.5.1",
-    "svg-sprite": "^1.5.0",
+    "svg-sprite": "^2.0.4",
     "vinyl": "^2.2.1",
     "webpack": "^5.10.0",
     "webpack-cli": "^4.2.0",
